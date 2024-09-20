@@ -7,7 +7,7 @@ This browser based web application to ...
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
 * Genevieve Glaim :)
-* Alex Howe: old person
+* Alex Howe
 * Gurman Pannu
 	
 ## 3. Technologies and Resources Used
