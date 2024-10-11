@@ -1,1 +1,63 @@
+#Navbar {
+    background-color: #272F3F;
+    font-family: "Rubik", serif;
+    font-weight: 900;
+}
 
+#DTC06 {
+    font-size: 36px;
+    text-shadow: 2px 2px white;
+    text-align: center;
+    line-height: 30px;
+}
+
+#Map {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+#Events {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+#SignUp {
+    float: right;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+    font-family: "Rubik", serif;
+    background-color: #65B4E7;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#SignUp a {
+    color: #272F3F;
+}
+
+#LogIn {
+    float: right;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+    font-family: "Rubik", serif;
+    background-color: #65B4E7;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#LogIn a {
+    color: #272F3F;
+}
