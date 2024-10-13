@@ -86,6 +86,37 @@
     font-size:108px;
 }
 
+#Welcome_msg p{
+    font-family: "Rubik", serif;
+    font-weight:400;
+    color: white;
+    padding-top: 5px;
+    font-size:48px;
+}
+
+#Welcome_button {
+    font-weight: 600;
+    color: #272F3F;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    font-family: "Rubik", serif;
+    background-color: #65B4E7;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: block;
+    width: fit-content;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#Welcome_button:hover {
+    background-color: #559ac6;
+    transform: translateY(-2px);
+}
+
 #BG_fade{
     min-height: 1200px;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 1%, #090f1a 100%);
