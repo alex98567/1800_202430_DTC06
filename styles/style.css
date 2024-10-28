@@ -4,6 +4,7 @@
     font-weight: 900;
     position: sticky;
     top:0;
+    min-width: 100%;
 }
 
 #DTC06 {
@@ -15,17 +16,13 @@
 }
 
 #Map {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 1.25em 1.25em 0em 1.25em;
     color: white;
     font-size: 1.5em;
 }
 
 #Events {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 1.25em 1.25em 0em 1.25em;
     color: white;
     font-size: 1.5em;
 }
@@ -38,8 +35,8 @@
     background-color: #F4C949;
     border-radius: 10px;
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.625em;
+    padding-right: 0.625em;
 }
 
 #SignUp a, #LogIn a{
@@ -48,15 +45,13 @@
 
 #LogIn {
     float: right;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 1.25em 1.25em 0em 1.25em;
     font-size: 0.75em;
     font-family: "Rubik", serif;
     background-color: #F4C949;
     border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.625em;
+    padding-right: 0.625em;
 }
 
 
