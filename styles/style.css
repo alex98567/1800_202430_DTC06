@@ -213,6 +213,55 @@
     display: none;
 }
 
+#home {
+    background-color: #E6E8EF;
+    text-decoration: none;
+}
+
+.homelink {
+    text-decoration: none;
+}
+
+.titlebox {
+    background-color: #94ABD9;
+    color: #071021;
+    font-size: 80px;
+    text-decoration: none;
+    border-radius: 10px;
+    min-width: 80%;
+    width: 80%;
+    max-width: 80%;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5%;
+}
+
+.homelink:link, .titlebox:link {
+    color: #071021;
+}
+
+.homelink:visited, .titlebox:visited {
+    color: #071021;
+}
+
+.homelink:hover, .titlebox:hover {
+    background-color:#272F3F;
+    color: white;
+}
+
+.homelink:active, .titlebox:active {
+    background-color: #F4C949;
+    color: #4A69A6;
+}
+
+.arrow {
+    float: right;
+    padding-right: 3%;
+    justify-content: center;
+    padding-top: 3%;
+}
+
 @media screen and (max-width: 1090px) {
     #footerfeatures {
         display: none;
