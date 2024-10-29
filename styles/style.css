@@ -121,24 +121,65 @@
     padding: 2%;
     font-size: 80px;
     max-width:100%;
-}
-
-#footer a {
     text-decoration: none;
 }
 
-#footer a:link {
+#footer-maps{
+    text-decoration: none;
+}
+
+#footer-maps:link {
     color: #4A69A6;
 }
 
-#footer a:visited {
+#footer-maps:visited {
     color: #4A69A6;
 }
 
-#footer a:hover {
+#footer-maps:hover {
     color: #4A69A6;
 }
 
-#footer a:active {
+#footer-maps:active {
+    color: white;
+}
+
+#footer-home {
+    text-decoration: none;
+}
+
+#footer-home:link {
+    color: #94ABD9;
+}
+
+#footer-home:visited {
+    color: #94ABD9;
+}
+
+#footer-home:hover {
+    color: #94ABD9;
+}
+
+#footer-home:active {
+    color: white;
+}
+
+#footer-events {
+    text-decoration: none;
+}
+
+#footer-events:link {
+    color: #4A69A6;
+}
+
+#footer-events:visited {
+    color: #4A69A6;
+}
+
+#footer-events:hover {
+    color: #4A69A6;
+}
+
+#footer-events:active {
     color: white;
 }
