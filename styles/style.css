@@ -118,6 +118,10 @@
     background-color: #090f1a;
 }
 
+#footerbody {
+    margin: 0px;
+}
+
 #footer {
     background-color: #272F3F;
     color: #F4C949;
@@ -125,6 +129,7 @@
     padding-bottom: 2%;
     font-size: 80px;
     max-width:100%;
+    min-width: 100%;
     text-decoration: none;
     width: 100%;
     text-align: center;
@@ -208,7 +213,7 @@
     display: none;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1090px) {
     #footerfeatures {
         display: none;
     }
