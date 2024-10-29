@@ -222,6 +222,7 @@
 #home {
     background-color: #E6E8EF;
     text-decoration: none;
+    margin: 0px;
 }
 
 .homelink {
@@ -240,6 +241,9 @@
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.homelink {
     padding-left: 5%;
 }
 
