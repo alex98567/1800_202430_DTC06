@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-*{
+* {
     font-family: "Rubik", serif;
     padding:0;
     margin:0;
@@ -12,6 +12,9 @@
     position: sticky;
     top:0;
     min-width: 100%;  
+    top: 0;
+    min-width: 100%;
+    display: flex;
 }
 
 #DTC06 {
@@ -21,12 +24,9 @@
     line-height: 3vh;
     color: #F4C949;
 }
-#NavLinks{
-    display:flex;
-    flex-direction: row;
-    gap:1em;
-    padding-right:0.2em;
-    
+#navbarSupportedContent{
+    display: flex;
+    min-width: 20%;
 }
 #NavButtons{
     display: flex;
@@ -35,6 +35,7 @@
     justify-content: end;
 
 }
+
 #Map {
     margin-top: 3vh;
     color: white;
@@ -59,12 +60,13 @@
     padding-right: 0.5vw;
 }
 
-#SignUp a, #LogIn a{
+#SignUp a,
+#LogIn a {
     color: #272F3F;
 }
 
 #LogIn {
-    margin-top:2vh;
+    margin-top: 2vh;
     font-size: 0.75em;
     background-color: #F4C949;
     border-radius: 10px;
@@ -74,32 +76,32 @@
 
 
 
-#Main_body{
-    max-width:100%;
-    overflow:hidden;
-    flex-shrink:0;
+#Main_body {
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
     background-size: cover;
-    background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.00) 20.9%, #090f1a 100%), url(../images/BCIT_DTC_BGIMG.jpg);
-    
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 20.9%, #090f1a 100%), url(../images/BCIT_DTC_BGIMG.jpg);
+
 }
 
-#Welcome_msg{
+#Welcome_msg {
     text-align: center;
     padding-bottom: 6em;
 }
 
-#Welcome_msg h1{
-    font-weight:900;
+#Welcome_msg h1 {
+    font-weight: 900;
     color: white;
     padding-top: 0.5em;
-    font-size:15vw;
+    font-size: 15vw;
 }
 
-#Welcome_msg p{
-    font-weight:400;
+#Welcome_msg p {
+    font-weight: 400;
     color: white;
     padding-top: 5px;
-    font-size:48px;
+    font-size: 48px;
 }
 
 #Welcome_button {
@@ -124,7 +126,7 @@
     transform: translateY(-2px);
 }
 
-#BG_fade{
+#BG_fade {
     min-height: 1200px;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 1%, #090f1a 100%);
     background-color: #090f1a;
@@ -140,7 +142,7 @@
     padding-top: 2%;
     padding-bottom: 2%;
     font-size: 80px;
-    max-width:100%;
+    max-width: 100%;
     min-width: 100%;
     text-decoration: none;
     width: 100%;
@@ -228,6 +230,7 @@
 #home {
     background-color: #E6E8EF;
     text-decoration: none;
+    margin: 0px;
 }
 
 .homelink {
@@ -246,23 +249,30 @@
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.homelink {
     padding-left: 5%;
 }
 
-.homelink:link, .titlebox:link {
+.homelink:link,
+.titlebox:link {
     color: #071021;
 }
 
-.homelink:visited, .titlebox:visited {
+.homelink:visited,
+.titlebox:visited {
     color: #071021;
 }
 
-.homelink:hover, .titlebox:hover {
-    background-color:#272F3F;
+.homelink:hover,
+.titlebox:hover {
+    background-color: #272F3F;
     color: white;
 }
 
-.homelink:active, .titlebox:active {
+.homelink:active,
+.titlebox:active {
     background-color: #F4C949;
     color: #4A69A6;
 }
@@ -272,6 +282,25 @@
     padding-right: 3%;
     justify-content: center;
     padding-top: 3%;
+}
+
+#eventboxeshome {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+
+.eventboxhome {
+    display: inline-block;
+    background-color: #4A69A6;
+    color: #090f1a;
+    width: 25%;
+    height: 350px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 1%;
+    margin-left: 1%;
 }
 
 @media screen and (max-width: 1090px) {
@@ -284,5 +313,5 @@
         justify-content: center;
         text-align: center;
     }
-    
+
 }
