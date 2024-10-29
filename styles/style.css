@@ -293,6 +293,34 @@
     text-align: center;
 }
 
+.favoritesbox {
+    display: inline-block;
+    background-color: #94ABD9;
+    color: #090f1a;
+    width: 60%;
+    height: 250px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 1%;
+    margin-left: 1%;
+    border-radius: 2em;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    text-align: center;
+    min-width: 64%;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.favoritesbox p {
+    font-size: 36px;
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 2%;
+}
+
 .eventboxhome {
     display: inline-block;
     background-color: #94ABD9;
@@ -309,25 +337,29 @@
     padding-top: 2%;
 }
 
-.eventboxhome a {
+.eventboxhome a, .favoritesbox a {
     font-size: 50px;
     text-decoration: none;
     font-weight: bold;
 }
 
-.eventboxhome a:link {
+.eventboxhome a:link,
+.favoritesbox a:link {
     color: #071021;
 }
 
-.eventboxhome a:visited {
+.eventboxhome a:visited,
+.favoritesbox a:visited {
     color: #071021;
 }
 
-.eventboxhome a:hover {
+.eventboxhome a:hover,
+.favoritesbox a:hover {
     color: #E6E8EF;
 }
 
-.eventboxhome a:active {
+.eventboxhome a:active,
+.favoritesbox a:active {
     color: #071021;
 }
 
@@ -338,9 +370,9 @@
     padding-top: 30px;
 }
 
-.boxarrow {
+.boxarrow, .favoritesarrow {
     padding-left: 80%;
-    padding-top: 70px;
+    padding-top: 20px;
 }
 
 #mapimage {
