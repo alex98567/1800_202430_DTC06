@@ -126,6 +126,7 @@
     max-width:100%;
     text-decoration: none;
     width: 100%;
+    text-align: center;
 }
 
 #footer-maps {
@@ -208,6 +209,8 @@
 
     #footermedia {
         display: flex;
+        justify-content: center;
+        text-align: center;
     }
     
 }
