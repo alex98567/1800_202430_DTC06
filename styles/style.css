@@ -120,6 +120,7 @@
     color: #F4C949;
     padding: 2%;
     font-size: 80px;
+    max-width:100%;
 }
 
 #footer a {
