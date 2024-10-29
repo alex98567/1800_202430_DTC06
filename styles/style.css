@@ -296,14 +296,25 @@
     display: inline-block;
     background-color: #94ABD9;
     color: #090f1a;
-    width: 25%;
+    width: 30%;
     height: 350px;
     justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-right: 1%;
     margin-left: 1%;
     border-radius: 2em;
+    padding-bottom: 2%;
+}
+
+.eventboxhome h1 {
+    font-size: 50px;
+    padding: 20px;
+}
+
+.eventboxhome p {
+    font-size: 36px;
+    padding: 2%;
 }
 
 @media screen and (max-width: 1090px) {
