@@ -239,17 +239,18 @@
 }
 
 .titlebox {
-    background-color: #94ABD9;
-    color: #071021;
+    background-color: #272F3F;
+    color: #E6E8EF;
     font-size: 80px;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 1em;
     min-width: 80%;
     width: 80%;
     max-width: 80%;
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 1em;
 }
 
 .homelink {
@@ -258,7 +259,7 @@
 
 .homelink:link,
 .titlebox:link {
-    color: #071021;
+    color: #E6E8EF;
 }
 
 .homelink:visited,
@@ -293,7 +294,7 @@
 
 .eventboxhome {
     display: inline-block;
-    background-color: #4A69A6;
+    background-color: #94ABD9;
     color: #090f1a;
     width: 30%;
     height: 350px;
@@ -302,6 +303,7 @@
     margin-bottom: 50px;
     margin-right: 1%;
     margin-left: 1%;
+    border-radius: 2em;
     padding-bottom: 2%;
 }
 
