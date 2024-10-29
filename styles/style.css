@@ -12,9 +12,6 @@
     position: sticky;
     top:0;
     min-width: 100%;  
-    top: 0;
-    min-width: 100%;
-    display: flex;
 }
 
 #DTC06 {
@@ -24,11 +21,15 @@
     line-height: 3vh;
     color: #F4C949;
 }
-#navbarSupportedContent{
-    display: flex;
-    min-width: 20%;
+#NavLinks{
+    display:flex;
+    flex-direction: row;
+    gap:1em;
+    padding-right:0.2em;
+    
 }
-#NavButtons{
+
+#NavButtons {
     display: flex;
     gap:0.5em;
     min-width: 25%;
