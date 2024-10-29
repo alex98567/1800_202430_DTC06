@@ -10,6 +10,7 @@
     position: sticky;
     top:0;
     min-width: 100%;  
+    display: flex;
 }
 
 #DTC06 {
@@ -21,16 +22,23 @@
 }
 #navbarSupportedContent{
     display: flex;
-    flex-direction: row;
+    min-width: 20%;
+}
+#NavButtons{
+    display: flex;
+    gap:1em;
+    min-width: 25%;
+    justify-content: end;
+
 }
 #Map {
-    margin: 2vh 1vw 0em 1vw;
+    margin-top: 2vh;
     color: white;
     font-size: 2vh;
 }
 
 #Events {
-    margin: 2vh 1vw 0em 1vw;
+    margin-top:2vh;
     color: white;
     font-size: 2vh;
 }
@@ -43,7 +51,6 @@
     text-align: center;
     padding-left: 0.5vw;
     padding-right: 0.5vw;
-    margin-left: 0;
 }
 
 #SignUp a, #LogIn a{
@@ -52,7 +59,6 @@
 
 #LogIn {
     margin-top:2vh;
-    margin-left:1em;
     font-size: 0.75em;
     background-color: #F4C949;
     border-radius: 10px;
