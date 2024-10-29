@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    font-family: "Rubik", serif;
+}
+
 #Navbar {
     background-color: #272F3F;
-    font-family: "Rubik", serif;
     font-weight: 900;
     position: sticky;
     top:0;
@@ -33,7 +38,6 @@
 #SignUp {
     margin-top: 2vh;
     font-size: 0.75em;
-    font-family: "Rubik", serif;
     background-color: #F4C949;
     border-radius: 10px;
     text-align: center;
@@ -50,7 +54,6 @@
     margin-top:2vh;
     margin-left:1em;
     font-size: 0.75em;
-    font-family: "Rubik", serif;
     background-color: #F4C949;
     border-radius: 10px;
     padding-left: 0.5vw;
@@ -74,7 +77,6 @@
 }
 
 #Welcome_msg h1{
-    font-family: "Rubik", serif;
     font-weight:900;
     color: white;
     padding-top: 0.5em;
@@ -82,7 +84,6 @@
 }
 
 #Welcome_msg p{
-    font-family: "Rubik", serif;
     font-weight:400;
     color: white;
     padding-top: 5px;
@@ -96,7 +97,6 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 24px;
-    font-family: "Rubik", serif;
     background-color: #F4C949;
     border-radius: 30px;
     padding: 10px 20px;
