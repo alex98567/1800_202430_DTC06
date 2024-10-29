@@ -343,6 +343,12 @@
     padding-top: 70px;
 }
 
+#mapimage {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 50px;
+}
+
 @media screen and (max-width: 1090px) {
     #footerfeatures {
         display: none;
