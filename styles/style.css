@@ -125,7 +125,7 @@
     width: 100%;
 }
 
-#footer-maps{
+#footer-maps {
     text-decoration: none;
     justify-content: center;
     float: left;
@@ -152,6 +152,7 @@
     text-decoration: none;
     justify-content: center;
     width: 33%;
+    float: none;
 }
 
 #footer-home:link {
@@ -193,8 +194,17 @@
     color: white;
 }
 
-@media screen and (max-width: 750px) {
-    #footer {
-        overflow: hidden;
+#footermedia {
+    display: none;
+}
+
+@media screen and (max-width: 980px) {
+    #footerfeatures {
+        display: none;
     }
+
+    #footermedia {
+        display: flex;
+    }
+    
 }
