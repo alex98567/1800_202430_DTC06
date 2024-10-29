@@ -271,7 +271,7 @@
 .homelink:hover,
 .titlebox:hover {
     background-color: #272F3F;
-    color: white;
+    color: #4A69A6;
 }
 
 .homelink:active,
@@ -306,6 +306,7 @@
     margin-left: 1%;
     border-radius: 2em;
     padding-bottom: 2%;
+    padding-top: 2%;
 }
 
 .eventboxhome a {
@@ -323,11 +324,11 @@
 }
 
 .eventboxhome a:hover {
-    color: #071021;
+    color: #E6E8EF;
 }
 
 .eventboxhome a:active {
-    color: #E6E8EF;
+    color: #071021;
 }
 
 .eventboxhome p {
@@ -339,6 +340,7 @@
 
 .boxarrow {
     padding-left: 80%;
+    padding-top: 70px;
 }
 
 @media screen and (max-width: 1090px) {
