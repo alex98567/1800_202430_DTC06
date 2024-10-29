@@ -126,6 +126,8 @@
 
 #footer-maps{
     text-decoration: none;
+    justify-content: center;
+    float: left;
 }
 
 #footer-maps:link {
@@ -146,6 +148,7 @@
 
 #footer-home {
     text-decoration: none;
+    justify-content: center;
 }
 
 #footer-home:link {
@@ -166,6 +169,8 @@
 
 #footer-events {
     text-decoration: none;
+    justify-content: center;
+    float: right;
 }
 
 #footer-events:link {
@@ -182,4 +187,10 @@
 
 #footer-events:active {
     color: white;
+}
+
+@media screen and (max-width: 750px) {
+    #footer {
+        overflow: hidden;
+    }
 }
