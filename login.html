@@ -12,7 +12,20 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    
+
+    <!-- Firebase Core SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+    <!-- Firebase Initialization -->
+    <script src="./scripts/firebaseAPI_TEAM99.js"></script>
+
+    <!-- Other scripts that use db -->
+    <script src="./scripts/skeleton.js"></script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles/style.css" />
 </head>
@@ -23,22 +36,54 @@
     <!-- Login Form -->
     <div class="container">
         <h1 class="text-center">Log In to DTC06</h1>
-        <div id="firebaseui-auth-container"></div>
-        <div id="loader">Loading...</div>
+        <div id="firebaseui-auth-container"></div> <!-- This is where the login form will appear -->
+        <div id="loader">Loading...</div> <!-- Loader before UI renders -->
     </div>
 
     <!-- Footer -->
     <nav id="footerPlaceholder"></nav>
 
-    <!-- Firebase, Bootstrap, and Custom Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-    
-    <script src="./scripts/firebaseAPI_TEAM99.js"></script>
-    <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/authentication.js"></script>
+    <!-- Firebase UI Configuration -->
+    <script>
+        // FirebaseUI config
+        var uiConfig = {
+            callbacks: {
+                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                    var user = authResult.user;
+                    if (authResult.additionalUserInfo.isNewUser) {
+                        // Save new user data to Firestore
+                        db.collection("users").doc(user.uid).set({
+                            name: user.displayName || "Unnamed User",
+                            email: user.email,
+                            country: "Canada",
+                            school: "BCIT"
+                        }).then(function () {
+                            window.location.assign("main.html");
+                        }).catch(function (error) {
+                            console.error("Error adding new user to Firestore: ", error);
+                        });
+                    } else {
+                        return true; // Redirect to main.html
+                    }
+                    return false;
+                },
+                uiShown: function () {
+                    // Hide the loader when UI is shown
+                    document.getElementById('loader').style.display = 'none';
+                }
+            },
+            signInFlow: 'popup', // Popup for sign-in
+            signInSuccessUrl: 'main.html', // Redirect after login
+            signInOptions: [
+                firebase.auth.EmailAuthProvider.PROVIDER_ID, // Enable Email/Password sign-in
+            ],
+            tosUrl: 'your-tos-url', // Add your Terms of Service URL
+            privacyPolicyUrl: 'your-privacy-policy-url' // Add your Privacy Policy URL
+        };
+
+        // Initialize FirebaseUI
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        ui.start('#firebaseui-auth-container', uiConfig); // Start the FirebaseUI widget
+    </script>
 </body>
 </html>
