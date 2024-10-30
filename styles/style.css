@@ -334,11 +334,18 @@
     color: #4A69A6;
 }
 
-.arrow, .arrowdown {
+.arrowdown {
     float: right;
     padding-right: 3%;
     justify-content: center;
     padding-top: 5%;
+}
+
+.arrow {
+    float: right;
+    padding-right: 3%;
+    justify-content: center;
+    padding-top: 3%;
 }
 
 #eventboxeshome {
