@@ -13,6 +13,7 @@
     position: sticky;
     top: 0;
     min-width: 100%;
+    padding: 2vh 1vw 1vh 1vw;
 }
 
 #DTC06 {
@@ -21,62 +22,52 @@
     text-align: center;
     line-height: 3vh;
     color: #F4C949;
+    padding:0;
+}
+
+#NavContent{
+    display:flex;
+    justify-content: space-between;
 }
 
 #NavLinks {
     display: flex;
     flex-direction: row;
     gap: 1em;
-    padding-right: 0.2em;
+    max-width:3vw;
 
 }
 
 #NavButtons {
     display: flex;
     gap: 0.5em;
-    min-width: 25%;
+    max-width:50%;
     justify-content: end;
 
 }
 
-#Map {
+#Map, #Events {
     margin-top: 3vh;
     color: white;
     font-size: 2vh;
     padding: 0;
 }
 
-#Events {
-    margin-top: 3vh;
-    color: white;
-    font-size: 2vh;
-    padding: 0;
-}
 
-#SignUp {
+#SignUp, #LogIn {
     margin-top: 2vh;
     font-size: 0.9em;
     background-color: #F4C949;
     border-radius: 10px;
     text-align: center;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding-left: 0.4vw;
+    padding-right: 0.4vw;
 }
 
 #SignUp a,
 #LogIn a {
     color: #272F3F;
 }
-
-#LogIn {
-    margin-top: 2vh;
-    font-size: 0.9em;
-    background-color: #F4C949;
-    border-radius: 10px;
-    padding-left: 1vw;
-    padding-right: 1vw;
-}
-
 
 
 #Main_body {
