@@ -6,7 +6,7 @@
     padding: 0;
     margin: 0;
 }
-
+/* Navbar Before Login */
 #Navbar {
     background-color: #272F3F;
     font-weight: 900;
@@ -23,6 +23,7 @@
     line-height: 3vh;
     color: #F4C949;
     padding:0;
+    text-decoration: none;
 }
 
 #NavContent{
@@ -67,6 +68,32 @@
 #SignUp a,
 #LogIn a {
     color: #272F3F;
+}
+
+/* Navbar After Login */
+#Nav_after{
+    display:flex;
+    text-align:center;
+    justify-content: space-between;
+    padding: 0 2em 0 2em;
+}
+#profile{
+    background-color: #fff;
+    width:5em;
+    height:5em;
+    border-radius: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+#profile img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+#profile:hover{
+    filter:brightness(70%);
 }
 
 
