@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+
 * {
     font-family: "Rubik", serif;
     padding: 0;
@@ -229,15 +230,10 @@
     display: none;
 }
 
-#home {
+#home, #map {
     background-color: #E6E8EF;
     text-decoration: none;
     margin: 0px;
-}
-
-.homelink {
-    text-decoration: none;
-    color: white;
 }
 
 .titlebox {
@@ -255,37 +251,61 @@
     margin-top: 1em;
 }
 
+.dropdown {
+    background-color: #272F3F;
+    color: #E6E8EF;
+    font-size: 80px;
+    text-decoration: none;
+    border-radius: 1em;
+    min-width: 80%;
+    width: 80%;
+    max-width: 80%;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.dropbtn {
+    background-color: #272F3F;
+    color: #E6E8EF;
+    font-size: 80px;
+    text-decoration: none;
+    border-radius: 1em;
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+}
+
 .homelink {
     padding-left: 5%;
+    text-decoration: none;
+    color: white;
 }
 
-.homelink:link,
-.titlebox:link {
+.homelink:link, .titlebox:link, .dropdown:link {
     color: #E6E8EF;
 }
 
-.homelink:visited,
-.titlebox:visited {
+.homelink:visited, .titlebox:visited, .dropdown:visited {
     color: #E6E8EF;
 }
 
-.homelink:hover,
-.titlebox:hover {
+.homelink:hover, .titlebox:hover, .dropdown:hover {
     background-color: #272F3F;
     color: #4A69A6;
 }
 
-.homelink:active,
-.titlebox:active {
+.homelink:active, .titlebox:active {
     background-color: #F4C949;
     color: #4A69A6;
 }
 
-.arrow {
+.arrow, .arrowdown {
     float: right;
     padding-right: 3%;
     justify-content: center;
-    padding-top: 3%;
+    padding-top: 5%;
 }
 
 #eventboxeshome {
@@ -390,4 +410,23 @@
         justify-content: center;
         text-align: center;
     }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
