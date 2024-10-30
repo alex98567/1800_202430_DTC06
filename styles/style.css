@@ -1,94 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    font-family: "Rubik", serif;
+    padding: 0;
+    margin: 0;
+}
+
 #Navbar {
     background-color: #272F3F;
-    font-family: "Rubik", serif;
     font-weight: 900;
     position: sticky;
-    top:0;
+    top: 0;
+    min-width: 100%;
 }
 
 #DTC06 {
-    font-size: 2.25em;
+    font-size: 3.6vh;
     text-shadow: 2px 2px white;
     text-align: center;
-    line-height: 30px;
+    line-height: 3vh;
     color: #F4C949;
 }
 
+#NavLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    padding-right: 0.2em;
+
+}
+
+#NavButtons {
+    display: flex;
+    gap: 0.5em;
+    min-width: 25%;
+    justify-content: end;
+
+}
+
 #Map {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 3vh;
     color: white;
-    font-size: 1.5em;
+    font-size: 2vh;
+    padding: 0;
 }
 
 #Events {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 3vh;
     color: white;
-    font-size: 1.5em;
+    font-size: 2vh;
+    padding: 0;
 }
 
 #SignUp {
-    float: right;
-    margin: 1.25em 1.25em 0em 1.25em;
-    font-size: 0.75em;
-    font-family: "Rubik", serif;
+    margin-top: 2vh;
+    font-size: 0.9em;
     background-color: #F4C949;
     border-radius: 10px;
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
-#SignUp a, #LogIn a{
+#SignUp a,
+#LogIn a {
     color: #272F3F;
 }
 
 #LogIn {
-    float: right;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 0.75em;
-    font-family: "Rubik", serif;
+    margin-top: 2vh;
+    font-size: 0.9em;
     background-color: #F4C949;
     border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 
 
-#Main_body{
-    max-width:100%;
-    overflow:hidden;
-    flex-shrink:0;
+#Main_body {
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
     background-size: cover;
-    background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.00) 20.9%, #090f1a 100%), url(../images/BCIT_DTC_BGIMG.jpg);
-    
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 20.9%, #090f1a 100%), url(../images/BCIT_DTC_BGIMG.jpg);
+
 }
 
-#Welcome_msg{
+#Welcome_msg {
     text-align: center;
     padding-bottom: 6em;
 }
 
-#Welcome_msg h1{
-    font-family: "Rubik", serif;
-    font-weight:900;
+#Welcome_msg h1 {
+    font-weight: 900;
     color: white;
     padding-top: 0.5em;
-    font-size:15vw;
+    font-size: 15vw;
 }
 
-#Welcome_msg p{
-    font-family: "Rubik", serif;
-    font-weight:400;
+#Welcome_msg p {
+    font-weight: 400;
     color: white;
     padding-top: 5px;
-    font-size:48px;
+    font-size: 48px;
 }
 
 #Welcome_button {
@@ -98,7 +113,6 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 24px;
-    font-family: "Rubik", serif;
     background-color: #F4C949;
     border-radius: 30px;
     padding: 10px 20px;
@@ -114,8 +128,266 @@
     transform: translateY(-2px);
 }
 
-#BG_fade{
+#BG_fade {
     min-height: 1200px;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 1%, #090f1a 100%);
     background-color: #090f1a;
+}
+
+#footerbody {
+    margin: 0px;
+}
+
+#footer {
+    background-color: #272F3F;
+    color: #F4C949;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 80px;
+    max-width: 100%;
+    min-width: 100%;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+#footerfeatures {
+    text-align: center;
+    justify-content: center;
+}
+
+#footer-maps {
+    text-decoration: none;
+    justify-content: center;
+    float: left;
+    width: 33%;
+}
+
+#footer-maps:link {
+    color: #4A69A6;
+}
+
+#footer-maps:visited {
+    color: #4A69A6;
+}
+
+#footer-maps:hover {
+    color: #4A69A6;
+}
+
+#footer-maps:active {
+    color: white;
+}
+
+#footer-home {
+    text-decoration: none;
+    justify-content: center;
+    width: 33%;
+    float: none;
+}
+
+#footer-home:link {
+    color: #94ABD9;
+}
+
+#footer-home:visited {
+    color: #94ABD9;
+}
+
+#footer-home:hover {
+    color: #94ABD9;
+}
+
+#footer-home:active {
+    color: white;
+}
+
+#footer-events {
+    text-decoration: none;
+    justify-content: center;
+    float: right;
+    width: 33%;
+}
+
+#footer-events:link {
+    color: #4A69A6;
+}
+
+#footer-events:visited {
+    color: #4A69A6;
+}
+
+#footer-events:hover {
+    color: #4A69A6;
+}
+
+#footer-events:active {
+    color: white;
+}
+
+#footermedia {
+    display: none;
+}
+
+#home {
+    background-color: #E6E8EF;
+    text-decoration: none;
+    margin: 0px;
+}
+
+.homelink {
+    text-decoration: none;
+    color: white;
+}
+
+.titlebox {
+    background-color: #272F3F;
+    color: #E6E8EF;
+    font-size: 80px;
+    text-decoration: none;
+    border-radius: 1em;
+    min-width: 80%;
+    width: 80%;
+    max-width: 80%;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1em;
+}
+
+.homelink {
+    padding-left: 5%;
+}
+
+.homelink:link,
+.titlebox:link {
+    color: #E6E8EF;
+}
+
+.homelink:visited,
+.titlebox:visited {
+    color: #E6E8EF;
+}
+
+.homelink:hover,
+.titlebox:hover {
+    background-color: #272F3F;
+    color: #4A69A6;
+}
+
+.homelink:active,
+.titlebox:active {
+    background-color: #F4C949;
+    color: #4A69A6;
+}
+
+.arrow {
+    float: right;
+    padding-right: 3%;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+#eventboxeshome {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+
+.favoritesbox {
+    display: inline-block;
+    background-color: #94ABD9;
+    color: #090f1a;
+    width: 60%;
+    height: 250px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 1%;
+    margin-left: 1%;
+    border-radius: 2em;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    text-align: center;
+    min-width: 64%;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.favoritesbox p {
+    font-size: 36px;
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 2%;
+}
+
+.eventboxhome {
+    display: inline-block;
+    background-color: #94ABD9;
+    color: #090f1a;
+    width: 30%;
+    height: 350px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 1%;
+    margin-left: 1%;
+    border-radius: 2em;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+.eventboxhome a, .favoritesbox a {
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.eventboxhome a:link, .favoritesbox a:link {
+    color: #071021;
+}
+
+.eventboxhome a:visited, .favoritesbox a:visited {
+    color: #071021;
+}
+
+
+.eventboxhome a:hover, .favoritesbox a:hover {
+    color: #E6E8EF;
+}
+
+.eventboxhome a:active, .favoritesbox a:active {
+    color: #071021;
+}
+
+.eventboxhome p {
+    font-size: 36px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 30px;
+}
+
+.boxarrow, .favoritesarrow {
+    padding-left: 80%;
+    padding-top: 70px;
+    padding-top: 20px;
+}
+
+#mapimage {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 1090px) {
+    #footerfeatures {
+        display: none;
+    }
+
+    #footermedia {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
 }
