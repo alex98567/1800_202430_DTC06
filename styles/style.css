@@ -328,7 +328,7 @@ body{
     margin-bottom: 5vh;
 }
 #AddFavorite{
-    border: black solid 1px;
+    border: black solid 0.2vw;
     padding: 2vh 5vw 02vh 5vw;
     font-weight: bold;
     font-size: 3vh;
@@ -336,9 +336,9 @@ body{
 }
 #AddFavorite:hover{
     background-color: var(--AccentYellow);
-    border:transparent;
     color:white;
     outline:none;
+    border:transparent solid 0.2vw;
 }
 /* footer */
 #footerbody {
