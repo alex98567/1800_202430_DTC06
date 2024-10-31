@@ -8,14 +8,14 @@
     text-decoration:none;
 }
 /* Variables */
-colors{
+:root{
     --BgColour: #E6E8EF;
     --AccentYellow: #F4C949;
     --DarkBluePrimary: #272F3F;
 }
 /* Navbar Before Login */
 #Navbar {
-    background-color: #272F3F;
+    background-color: var(--DarkBluePrimary);
     font-weight: 900;
     position: sticky;
     top: 0;
@@ -28,7 +28,7 @@ colors{
     text-shadow: 2px 2px white;
     text-align: center;
     line-height: 3vh;
-    color: #F4C949;
+    color: var(--AccentYellow);
     padding:0;
     text-decoration: none;
 }
@@ -65,7 +65,7 @@ colors{
 #SignUp, #LogIn {
     margin-top: 2vh;
     font-size: 0.9em;
-    background-color: #F4C949;
+    background-color: var(--AccentYellow);
     border-radius: 10px;
     text-align: center;
     padding-left: 0.4vw;
@@ -85,7 +85,7 @@ colors{
     padding: 0 2em 0 2em;
 }
 #profile{
-    background-color: #fff;
+    background-color: var(--BgColour);
     width:5em;
     height:5em;
     border-radius: 100%;
@@ -134,12 +134,12 @@ colors{
 
 #Welcome_button {
     font-weight: 600;
-    color: #272F3F;
+    color: var(--DarkBluePrimary);
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     font-size: 24px;
-    background-color: #F4C949;
+    background-color: var(--AccentYellow);
     border-radius: 30px;
     padding: 10px 20px;
     display: block;
@@ -162,7 +162,7 @@ colors{
 
 /* Events list page */
 body{
-    background-color: #E6E8EF;
+    background-color: var(--BgColour);
 }
 #EventsContent{
     min-width: 100%;
@@ -247,7 +247,7 @@ body{
 }
 
 #footer {
-    background-color: #272F3F;
+    background-color: var(--DarkBluePrimary);
     color: #F4C949;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -338,14 +338,14 @@ body{
 }
 /* map/home page */
 #home, #map {
-    background-color: #E6E8EF;
+    background-color: var(--BgColour);
     text-decoration: none;
     margin: 0px;
 }
 
 .titlebox {
-    background-color: #272F3F;
-    color: #E6E8EF;
+    background-color: var(--DarkBluePrimary);
+    color: var(--BgColour);
     font-size: 80px;
     text-decoration: none;
     border-radius: 1em;
@@ -359,8 +359,8 @@ body{
 }
 
 .dropdown {
-    background-color: #272F3F;
-    color: #E6E8EF;
+    background-color: var(--DarkBluePrimary);
+    color: var(--BgColour);
     font-size: 80px;
     text-decoration: none;
     border-radius: 1em;
@@ -373,7 +373,7 @@ body{
 }
 
 .dropdown-content a {
-    background-color: #E6E8EF;
+    background-color: var(--BgColour);
     color: #090f1a;
     font-size: 80px;
     text-decoration: none;
@@ -388,8 +388,8 @@ body{
 }
 
 .dropbtn{
-    background-color: #272F3F;
-    color: #E6E8EF;
+    background-color: var(--DarkBluePrimary);
+    color: var(--BgColour);
     font-size: 80px;
     text-decoration: none;
     border-radius: 1em;
@@ -406,20 +406,20 @@ body{
 }
 
 .homelink:link, .titlebox:link, .dropdown:link {
-    color: #E6E8EF;
+    color: var(--BgColour);
 }
 
 .homelink:visited, .titlebox:visited, .dropdown:visited {
-    color: #E6E8EF;
+    color: var(--BgColour);
 }
 
 .homelink:hover, .titlebox:hover, .dropdown:hover {
-    background-color: #272F3F;
+    background-color: var(--DarkBluePrimary);
     color: #4A69A6;
 }
 
 .homelink:active, .titlebox:active {
-    background-color: #F4C949;
+    background-color: var(--AccentYellow);
     color: #4A69A6;
 }
 
@@ -503,7 +503,7 @@ body{
 
 
 .eventboxhome a:hover, .favoritesbox a:hover {
-    color: #E6E8EF;
+    color: var(--BgColour);
 }
 
 .eventboxhome a:active, .favoritesbox a:active {
@@ -555,7 +555,7 @@ body{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #E6E8EF;
+    background-color: var(--BgColour);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
