@@ -7,6 +7,12 @@
     margin: 0;
     text-decoration:none;
 }
+/* Variables */
+colors{
+    --BgColour: #E6E8EF;
+    --AccentYellow: #F4C949;
+    --DarkBluePrimary: #272F3F;
+}
 /* Navbar Before Login */
 #Navbar {
     background-color: #272F3F;
@@ -155,6 +161,9 @@
 }
 
 /* Events list page */
+body{
+    background-color: #E6E8EF;
+}
 #EventsContent{
     min-width: 100%;
     display:inline-flex;
@@ -228,6 +237,7 @@
     border-radius: 2em;
     background-color: grey;
     text-align: center;
+    color:white;
 
 }
 
