@@ -97,7 +97,7 @@
     filter:brightness(70%);
 }
 
-
+/* landing page */
 #Main_body {
     max-width: 100%;
     overflow: hidden;
@@ -154,6 +154,84 @@
     background-color: #090f1a;
 }
 
+/* Events list page */
+#EventsContent{
+    min-width: 100%;
+    display:inline-flex;
+    justify-content:center;
+    margin-top: 3vh;
+    flex-direction: column;
+    align-items: center;
+
+}
+#EventsTop{
+    min-width: 100%;
+    display:flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 2em 0 2em;
+}
+#EventsTitle{
+    flex-basis: 80%;
+    padding-right: 20vw;
+
+}
+
+#EventsTitle h1{
+    font-size:7vw;
+}
+
+#backArrow{
+    flex-basis: 6%;
+    height:auto;
+    min-width: 2.2em;
+    cursor: pointer;
+}
+
+#search{
+    min-width:100%;
+    padding: 0 6em 0 6em;
+    display: flex;
+    justify-content: center;
+}
+
+#searchBar{
+    border:black solid 0.2em;
+    padding: 0 1vw 0 1vw;
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    width:fit-content;
+    height:auto;
+
+}
+
+#searchBar input{
+    border:none;
+    background-color: transparent;
+}
+
+#searchBar input:focus{
+    border:none;
+    outline: none;
+    background-color: transparent;
+}
+
+#filters{
+    cursor: pointer;
+}
+
+#eventItem{
+    padding: 0 7vw 0 7vw;
+    border-radius: 2em;
+    background-color: grey;
+    text-align: center;
+
+}
+
+/* footer */
 #footerbody {
     margin: 0px;
 }
@@ -248,7 +326,7 @@
 #footermedia {
     display: none;
 }
-
+/* map/home page */
 #home, #map {
     background-color: #E6E8EF;
     text-decoration: none;
