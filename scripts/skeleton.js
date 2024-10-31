@@ -21,7 +21,7 @@
 
 function loadNav() {
   $("#navbarPlaceholder").load("navbar_before_login.html");
-  $("footerPlaceholder").load("footer.html");
+  $("#footerPlaceholder").load("footer.html");
 }
 //placeholder navbar/footer replacer until firebase is installed.
 loadNav();
