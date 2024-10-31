@@ -622,7 +622,7 @@ body{
     background-color: #94ABD9;
     color: #090f1a;
     width: 30%;
-    height: 350px;
+    height: auto;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 50px;
