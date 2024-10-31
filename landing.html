@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My BCIT Project</title>
+    <title>Landing</title>
     <meta name="comp1800 template" content="My 1800 App" />
 
     <!-- Required meta tags -->
@@ -18,7 +18,13 @@
     <!-- Boostrap Library JS CDN  go here -->
 
     <!-- Other libraries go here -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script> 
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
@@ -28,7 +34,7 @@
     <!-- Your HTML Layout go here -->
     <!------------------------------>
     <!-- Stuff for body goes here -->
-    <nav id="#navbarPlaceholder"></nav>
+    <nav id="navbarPlaceholder"></nav>
 
     <div id="Main_body">
       <div id="Welcome_msg">
@@ -50,8 +56,9 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <!-- <script src="./scripts/script.js"></script> -->
-    <!-- <script src="./scripts/skeleton.js"></script> -->
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/skeleton.js"></script>
+    <script src="./scripts/firebaseAPI_TEAM99.js"></script>
     <!-- <script src="./scripts/main.js"></script> -->
   </body>
 </html>
