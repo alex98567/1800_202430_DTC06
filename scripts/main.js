@@ -25,6 +25,7 @@
 
 // Function to read the quote of the day from the Firestore "quotes" collection
 // Input param is the String representing the day of the week, aka, the document name
+
 function readMap(map) {
   db.collection("floor plans").doc(map) //name of the collection and documents should matach excatly with what you have in Firestore
     .onSnapshot(mapDoc => {
@@ -38,7 +39,7 @@ function readMap(map) {
       //document.querySelector("#quote-goes-here").innerHTML = dayDoc.data().quote;
     }, (error) => {
       console.log("Error calling onSnapshot", error);
-    });
+  });
 }
 readMap("floor1"); //calling the function
 
