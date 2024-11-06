@@ -19,7 +19,8 @@
     z-index: 1;
 }
 body{
-    min-height: 100vh;
+    height:100vh;
+    width:100%;
     display: flex;
     flex-direction: column;
 }
@@ -27,7 +28,7 @@ body{
     position:sticky;
     bottom:0;
     z-index: 1;
-    margin-top:auto;
+
 }
 /* Navbar Before Login */
 #Navbar {
@@ -245,7 +246,6 @@ body{
 }
 #eventItemList{
     height:100%;
-    padding: 0 1em;
     display:grid;
     grid-template-columns: repeat(2, auto);
     gap:2vh;
@@ -379,76 +379,34 @@ body{
 /* footer */
 #footer {
     background-color: var(--DarkBluePrimary);
-    color: #F4C949;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    font-size: 4vw;
-    text-decoration: none;
-    width: 100%;
-    text-align: center;
-    height:auto;
+    padding: 1vh 2vw;
+    width:100%;
 }
-
 #footerfeatures {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+#footer-maps, #footer-home, #footer-events, #footer-favorites{
+    display:flex;
+    flex-direction: column;
     text-align: center;
+    font-size:2vw;
+    cursor: pointer;
     justify-content: center;
+    align-items: center;
 }
-
-#footer-maps {
-    text-decoration: none;
-    justify-content: center;
-    float: left;
-    width: 33%;
+#footer-maps:hover,
+#footer-home:hover,
+#footer-events:hover, #footer-favorites:hover {
+    filter:brightness(120%)
 }
-
-#footer-maps:link {
-    color: #4A69A6;
-}
-
-#footer-maps:visited {
-    color: #4A69A6;
-}
-
-#footer-maps:hover {
-    color: #4A69A6;
-}
-
-#footer-maps:active {
-    color: white;
-}
-
-#footer-home {
-    text-decoration: none;
-    justify-content: center;
-    width: 33%;
-    float: none;
-}
-
-#footer-home:hover, #footer-home:visited, #footer-home:link{
-    color: #94ABD9;
-}
-
-#footer-home:active {
-    color: white;
-}
-
-#footer-events {
-    text-decoration: none;
-    justify-content: center;
-    float: right;
-    width: 33%;
-}
-
-#footer-events:visited, #footer-events:hover, #footer-events:link {
-    color: #4A69A6;
-}
-
-#footer-events:active {
-    color: white;
-}
-
-#footermedia {
-    display: none;
+#footer-maps a,
+#footer-home a,
+#footer-events a, #footer-favorites a {
+    text-decoration:none;
+    color:var(--BgColour);
 }
 /* map/home page */
 #home, #map {
@@ -650,15 +608,9 @@ body{
     padding-top: 25%;
 }
 
-@media screen and (max-width: 1090px) {
-    #footerfeatures {
-        display: none;
-    }
-
-    #footermedia {
-        display: flex;
-        justify-content: center;
-        text-align: center;
+@media screen and (min-width: 767px) {
+    #footer-maps a, #footer-home a, #footer-events a, #footer-favorites a {
+        display:none;
     }
 }
 
