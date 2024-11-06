@@ -393,16 +393,13 @@ body{
 #footer {
     background-color: var(--DarkBluePrimary);
     color: #F4C949;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    font-size: 80px;
-    max-width: 100%;
-    min-width: 100%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: 4vw;
     text-decoration: none;
     width: 100%;
     text-align: center;
-    position:sticky;
-    bottom:0;
+    height:auto;
 }
 
 #footerfeatures {
@@ -440,15 +437,7 @@ body{
     float: none;
 }
 
-#footer-home:link {
-    color: #94ABD9;
-}
-
-#footer-home:visited {
-    color: #94ABD9;
-}
-
-#footer-home:hover {
+#footer-home:hover, #footer-home:visited, #footer-home:link{
     color: #94ABD9;
 }
 
@@ -463,15 +452,7 @@ body{
     width: 33%;
 }
 
-#footer-events:link {
-    color: #4A69A6;
-}
-
-#footer-events:visited {
-    color: #4A69A6;
-}
-
-#footer-events:hover {
+#footer-events:visited, #footer-events:hover, #footer-events:link {
     color: #4A69A6;
 }
 
@@ -587,6 +568,7 @@ body{
     display: inline-block;
     justify-content: center;
     text-align: center;
+    
 }
 
 .favoritesbox {
