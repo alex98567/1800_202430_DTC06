@@ -18,10 +18,3 @@ function loadSkeleton() {
   });
 }
 loadSkeleton(); //invoke the function
-
-// function loadNav() {
-//   $("#navbarPlaceholder").load("./text/navbar_before_login.html");
-//   $("#footerPlaceholder").load("./text/footer.html");
-// }
-// //placeholder navbar/footer replacer until firebase is installed.
-// loadNav();

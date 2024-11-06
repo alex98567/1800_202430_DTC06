@@ -94,26 +94,14 @@ body{
 }
 
 /* Navbar After Login */
-#Nav_after{
-    display:flex;
-    text-align:center;
-    justify-content: space-between;
-    padding: 0 2em 0 2em;
-}
 #profile{
-    background-color: var(--BgColour);
-    width:5em;
-    height:5em;
+    width:3em;
+    height:3em;
     border-radius: 100%;
-    display: flex;
-    overflow: hidden;
+    object-fit: cover;
+    border: var(--BgColour) 0.1em solid;
 }
 
-#profile img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-}
 
 #profile:hover{
     filter:brightness(70%);
