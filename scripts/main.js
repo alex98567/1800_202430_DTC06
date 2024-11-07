@@ -71,7 +71,7 @@ function displayCardsDynamically(collection) {
 
         //update title and text and image
         newcard.querySelector('#eventTitle').innerHTML = title;
-        newcard.querySelector('#eventDescription').innerHTML = details;
+        newcard.querySelector('#eventBriefDescription').innerHTML = details;
         document.getElementById("eventItemList").appendChild(newcard);
 
       })
