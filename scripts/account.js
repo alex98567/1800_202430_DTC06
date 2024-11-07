@@ -1,59 +1,53 @@
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-        // Display user information
-        document.getElementById("user-name").textContent = user.displayName;
-        document.getElementById("user-email").textContent = user.email;
+var currentUser;               //points to the document of the user who is logged in
+function populateUserInfo() {
+            firebase.auth().onAuthStateChanged(user => {
+                // Check if user is signed in:
+                if (user) {
 
-        // Logout function
-        document.getElementById("logout").addEventListener("click", function() {
-            firebase.auth().signOut().then(() => {
-                window.location.assign("login.html");
-            }).catch((error) => {
-                console.log("Error logging out:", error);
+                    //go to the correct user document by referencing to the user uid
+                    currentUser = db.collection("users").doc(user.uid)
+                    //get the document for current user.
+                    currentUser.get()
+                        .then(userDoc => {
+                            //get the data fields of the user
+                            let userName = userDoc.data().name;
+                            let userSchool = userDoc.data().school;
+                            let userCity = userDoc.data().city;
+
+                            //if the data fields are not empty, then write them in to the form.
+                            if (userName != null) {
+                                document.getElementById("nameInput").value = userName;
+                            }
+                            if (userSchool != null) {
+                                document.getElementById("schoolInput").value = userSchool;
+                            }
+                            if (userCity != null) {
+                                document.getElementById("cityInput").value = userCity;
+                            }
+                        })
+                } else {
+                    // No user is signed in.
+                    console.log ("No user is signed in");
+                }
             });
-        });
+        }
 
-        // Handle updating account info
-        document.getElementById("update-info").addEventListener("click", function() {
-            $("#updateAccountModal").modal("show"); // Show the modal for updating info
-        });
+//call the function to run it 
+populateUserInfo();
 
-        // Handle form submission for updating account
-        document.getElementById("update-account-form").addEventListener("submit", function(e) {
-            e.preventDefault();
+function editUserInfo() {
+    //Enable the form fields
+    document.getElementById('personalInfoFields').disabled = false;
+ }
 
-            const newName = document.getElementById("newName").value;
-            const newEmail = document.getElementById("newEmail").value;
+function saveUserInfo() {
+    //enter code here
 
-            let promises = [];
+    userName = document.getElementById('nameInput').value;       //get the value of the field with id="nameInput"
+    userSchool = document.getElementById('schoolInput').value;     //get the value of the field with id="schoolInput"
+    userCity = document.getElementById('cityInput').value;       //get the value of the field with id="cityInput"
 
-            if (newName) {
-                promises.push(user.updateProfile({ displayName: newName }));
-            }
-
-            if (newEmail) {
-                promises.push(user.updateEmail(newEmail));
-            }
-
-            Promise.all(promises)
-                .then(() => {
-                    // Update Firestore with the new data
-                    return db.collection("users").doc(user.uid).update({
-                        name: newName || user.displayName,
-                        email: newEmail || user.email
-                    });
-                })
-                .then(() => {
-                    alert("Account updated successfully!");
-                    window.location.reload();
-                })
-                .catch((error) => {
-                    console.log("Error updating account:", error);
-                    alert(error.message);
-                });
-        });
-    } else {
-        // Redirect to login if not logged in
-        window.location.assign("login.html");
-    }
-});
+    currentUser.update({name: userName, school: userSchool, city: userCity}).then(() => {console.log("Document successfully updated!");
+})
+    document.getElementById('personalInfoFields').disabled = true;
+}

@@ -21,44 +21,30 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- Account Information Section -->
-    <div class="container mt-5">
-        <h1 class="text-center">Your Account</h1>
-        <div id="account-info" class="mt-4">
-            <p><strong>Name:</strong> <span id="user-name"></span></p>
-            <p><strong>Email:</strong> <span id="user-email"></span></p>
-
-            <button id="update-info" class="btn btn-primary">Update Info</button>
-            <button id="logout" class="btn btn-danger">Log Out</button>
-        </div>
-
-        <!-- Update Account Info Modal -->
-        <div class="modal fade" id="updateAccountModal" tabindex="-1" role="dialog" aria-labelledby="updateAccountModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="updateAccountModalLabel">Update Account Info</h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="update-account-form">
-                            <div class="form-group">
-                                <label for="newName">New Name</label>
-                                <input type="text" id="newName" class="form-control" placeholder="Enter new name">
-                            </div>
-                            <div class="form-group">
-                                <label for="newEmail">New Email</label>
-                                <input type="email" id="newEmail" class="form-control" placeholder="Enter new email">
-                            </div>
-                            <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
-                        </form>
-                    </div>
+    <div class="container">
+        <h1>User Profile </h1>
+        <form>
+            <fieldset class="mb-3" id="personalInfoFields" disabled>
+                <div class="form-group">
+                    <label >Name</label>
+                    <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
                 </div>
+                <div class="form-group">
+                    <label >School</label>
+                    <input type="text" id="schoolInput" class="form-control" placeholder="Enter your school">
+                </div>
+                <div class="form-group">
+                    <label >City</label>
+                    <input type="text" id="cityInput" class="form-control" placeholder="Enter your city">
+                </div>
+            </fieldset>
+            <div class="d-flex justify-content-end mt-5">
+                <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
+                <span style="width: 10px"></span>
+                <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
             </div>
-        </div>
+        </form>
     </div>
-
     <!-- Footer -->
     <nav id="footerPlaceholder"></nav>
 
