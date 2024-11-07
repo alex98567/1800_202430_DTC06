@@ -268,13 +268,13 @@ body{
     text-align: left;
     align-items: center;
 }
-#eventItem h1{
+#eventTitle{
     font-size:4vw;
     position: absolute;
     top:10%;
     left:5%;
 }
-#eventItem p{
+#eventDescription{
     padding-top: 2vh;
     font-size:1.5vw;
 }

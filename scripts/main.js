@@ -43,22 +43,39 @@ function readMap(map) {
 }
 readMap("floor1"); //calling the function
 
-
-// Function to read the quote of the day from the Firestore "quotes" collection
-// Input param is the String representing the day of the week, aka, the document name
-function readQuote(day) {
-  db.collection("quotes").doc(day)                                                         //name of the collection and documents should matach excatly with what you have in Firestore
-    .onSnapshot(dayDoc => {                                                              //arrow notation
-      console.log("current document data: " + dayDoc.data());                          //.data() returns data object
-      document.getElementById("quote-goes-here").innerHTML = dayDoc.data().quote;      //using javascript to display the data on the right place
-
-      //Here are other ways to access key-value data fields
-      //$('#quote-goes-here').text(dayDoc.data().quote);         //using jquery object dot notation
-      //$("#quote-goes-here").text(dayDoc.data()["quote"]);      //using json object indexing
-      //document.querySelector("#quote-goes-here").innerHTML = dayDoc.data().quote;
-
-    }, (error) => {
-      console.log("Error calling onSnapshot", error);
-    });
+function writeEventLoop(max) {
+  //define a variable for the collection you want to create in Firestore to populate data
+  var eventsRef = db.collection("Events");
+  for (i = 1; i <= max; i++) {
+    eventsRef.add({ //add to database, autogen ID
+      name: "Event " + i,
+      details: "This will be the description of the hike. Maybe some other information.",
+      last_updated: firebase.firestore.FieldValue.serverTimestamp()
+    })
+  }
 }
-readQuote("tuesday");        //calling the function
+
+//------------------------------------------------------------------------------
+// Input parameter is a string representing the collection we are reading from
+//------------------------------------------------------------------------------
+function displayCardsDynamically(collection) {
+  let cardTemplate = document.getElementById("eventItemTemplate");
+
+  db.collection(collection).get()
+    .then(allEvents => {
+      //var i = 1;  //Optional: if you want to have a unique ID for each hike
+      allEvents.forEach(doc => { //iterate thru each doc
+        var title = doc.data().name;       // get value of the "name" key
+        var details = doc.data().details;  // get value of the "details" key
+        let newcard = cardTemplate.content.cloneNode(true); // Clone the HTML template to create a new card (newcard) that will be filled with Firestore data.
+
+        //update title and text and image
+        newcard.querySelector('#eventTitle').innerHTML = title;
+        newcard.querySelector('#eventDescription').innerHTML = details;
+        document.getElementById("eventItemList").appendChild(newcard);
+
+      })
+    })
+}
+
+displayCardsDynamically("Events");
