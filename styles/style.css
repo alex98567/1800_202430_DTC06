@@ -193,6 +193,34 @@ body{
     font-size: 10vw;
 }
 
+#landingFooter{
+    width:100%;
+    height:fit-content;
+    padding: 1vh 1vw 0 1vh;
+    background-color: #040913;
+    display: flex;
+    justify-content: space-between;
+    gap:2em;
+    align-items: start;
+    position: relative;
+}
+
+#copyright{
+    position: absolute;
+    bottom:0;
+}
+
+ #landingAbout, #landingContact{
+    width:33%;
+    padding: 1em;
+}
+
+#landingDesc{
+    width:66%;
+    padding:2em;
+    text-align: center;
+}
+
 /* Events list page */
 #eventBody{
     background-color: var(--BgColour);
