@@ -28,7 +28,6 @@ body{
 #footerPlaceholder{
     position:fixed;
     bottom:0;
-    z-index: 1;
     width:100%;
 
 }
@@ -446,14 +445,15 @@ body{
 }
 #footer-maps, #footer-home, #footer-events, #footer-favorites{
     display:flex;
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    text-align: left;
     font-size:2vw;
     cursor: pointer;
     justify-content: center;
     align-items: center;
     height:auto;
     width:20em;
+    gap:1em;
 }
 #footer-maps:hover,
 #footer-home:hover,
@@ -543,10 +543,7 @@ body{
     color: var(--BgColour);
 }
 
-.homelink:hover, .titlebox:hover, .dropdown:hover {
-    background-color: var(--DarkBluePrimary);
-    color: #4A69A6;
-}
+
 
 .homelink:active, .titlebox:active {
     background-color: var(--AccentYellow);
@@ -631,7 +628,6 @@ body{
 .eventboxhome a:visited, .favoritesbox a:visited {
     color: #071021;
 }
-
 
 .eventboxhome a:hover, .favoritesbox a:hover {
     color: var(--BgColour);
