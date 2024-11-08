@@ -49,21 +49,18 @@ function writeEventLoop(max) {
   for (i = 1; i <= max; i++) {
     eventsRef.add({ //add to database, autogen ID
       name: "Event " + i,
-      details: "This will be the description of the hike. Maybe some other information.",
+      details: "This will be the description of the event. Maybe some other information.",
       last_updated: firebase.firestore.FieldValue.serverTimestamp()
     })
   }
 }
 
-//------------------------------------------------------------------------------
-// Input parameter is a string representing the collection we are reading from
-//------------------------------------------------------------------------------
+
 function displayCardsDynamically(collection) {
   let cardTemplate = document.getElementById("eventItemTemplate");
 
   db.collection(collection).get()
     .then(allEvents => {
-      //var i = 1;  //Optional: if you want to have a unique ID for each hike
       allEvents.forEach(doc => { //iterate thru each doc
         var title = doc.data().name;       // get value of the "name" key
         var details = doc.data().details;  // get value of the "details" key
