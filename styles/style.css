@@ -447,7 +447,6 @@ body{
     display:flex;
     flex-direction: row;
     text-align: left;
-    font-size:2vw;
     cursor: pointer;
     justify-content: center;
     align-items: center;
@@ -460,11 +459,10 @@ body{
 #footer-events:hover, #footer-favorites:hover {
     filter:brightness(120%)
 }
-#footer-maps a,
-#footer-home a,
-#footer-events a, #footer-favorites a {
+#footerText {
     text-decoration:none;
     color:var(--BgColour);
+    font-size: 3vw;
 }
 /* map/home page */
 #home, #map {
@@ -663,7 +661,7 @@ body{
 }
 
 @media screen and (max-width: 767px) {
-    #footer-maps a, #footer-home a, #footer-events a, #footer-favorites a {
+    #footerText{
         display:none;
     }
 
