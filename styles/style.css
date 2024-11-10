@@ -11,7 +11,7 @@
 :root{
     --BgColour: #E6E8EF;
     --AccentYellow: #F4C949;
-    --DarkBluePrimary: #272F3F;
+    --DarkBluePrimary: #090f1a;
 }
 #navbarPlaceholder{
     position: sticky;
@@ -98,8 +98,8 @@ body{
 
 /* Navbar After Login */
 #profile{
-    width:3em;
-    height:3em;
+    width:4rem;
+    height:4rem;
     border-radius: 100%;
     object-fit: cover;
     border: var(--BgColour) 0.1em solid;
@@ -274,7 +274,7 @@ body{
 
 #searchBar{
     border:black solid 0.15em;
-    padding: 0 1vw 0 1vw;
+    padding: 0 1vw;
     border-radius: 2em;
     display:flex;
     justify-content:space-evenly;
@@ -301,12 +301,12 @@ body{
     cursor: pointer;
 }
 #eventItemList{
-    height:100%;
+    height:fit-content;
     display:grid;
     grid-template-columns: repeat(2, auto);
-    gap:2vh;
+    gap:1vh;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 #eventItem{
