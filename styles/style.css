@@ -12,6 +12,7 @@
     --BgColour: #E6E8EF;
     --AccentYellow: #F4C949;
     --DarkBluePrimary: #090f1a;
+    --DarkBgColor: #0d131d;
 }
 #navbarPlaceholder{
     position: sticky;
@@ -452,7 +453,7 @@ body{
     align-items: center;
     height:auto;
     width:20em;
-    gap:1em;
+    gap:1em;  
 }
 #footer-maps:hover,
 #footer-home:hover,
@@ -535,6 +536,7 @@ body{
 
 .homelink:link, .titlebox:link, .dropdown:link {
     color: var(--BgColour);
+    text-decoration: none;
 }
 
 .homelink:visited, .titlebox:visited, .dropdown:visited {
@@ -571,7 +573,7 @@ body{
 
 .favoritesbox {
     display: inline-block;
-    background-color: #94ABD9;
+    background-color: var(--DarkBgColor);
     color: #090f1a;
     width: 60%;
     height: 250px;
@@ -591,26 +593,20 @@ body{
 
 .favoritesbox p {
     font-size: 36px;
-    padding-top: 2%;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-bottom: 2%;
+    padding:2% 1%;
+    color:var(--BgColour)
 }
 
 .eventboxhome {
     display: inline-block;
-    background-color: #94ABD9;
-    color: #090f1a;
+    background-color:var(--DarkBgColor) ;
+    color: var(--BgColour);
     width: 30%;
     height: auto;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: 1%;
-    margin-left: 1%;
+    margin: 2em 2em;
     border-radius: 2em;
-    padding-bottom: 2%;
-    padding-top: 2%;
+    padding:2% 2%;
 }
 
 .eventboxhome a, .favoritesbox a {
@@ -620,26 +616,20 @@ body{
 }
 
 .eventboxhome a:link, .favoritesbox a:link {
-    color: #071021;
-}
-
-.eventboxhome a:visited, .favoritesbox a:visited {
-    color: #071021;
-}
-
-.eventboxhome a:hover, .favoritesbox a:hover {
     color: var(--BgColour);
 }
 
-.eventboxhome a:active, .favoritesbox a:active {
-    color: #071021;
+.eventboxhome a:visited, .favoritesbox a:visited {
+    color: var(--BgColour);
+}
+
+.eventboxhome a:hover, .favoritesbox a:hover {
+    filter:opacity(20%);
 }
 
 .eventboxhome p {
     font-size: 36px;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 30px;
+    padding: 2% 2%;
 }
 
 .boxarrow, .favoritesarrow {
