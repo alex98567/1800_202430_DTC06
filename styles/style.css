@@ -28,7 +28,6 @@ body{
 #footerPlaceholder{
     position:fixed;
     bottom:0;
-    z-index: 1;
     width:100%;
 
 }
@@ -446,25 +445,24 @@ body{
 }
 #footer-maps, #footer-home, #footer-events, #footer-favorites{
     display:flex;
-    flex-direction: column;
-    text-align: center;
-    font-size:2vw;
+    flex-direction: row;
+    text-align: left;
     cursor: pointer;
     justify-content: center;
     align-items: center;
     height:auto;
     width:20em;
+    gap:1em;
 }
 #footer-maps:hover,
 #footer-home:hover,
 #footer-events:hover, #footer-favorites:hover {
     filter:brightness(120%)
 }
-#footer-maps a,
-#footer-home a,
-#footer-events a, #footer-favorites a {
+#footerText {
     text-decoration:none;
     color:var(--BgColour);
+    font-size: 3vw;
 }
 /* map/home page */
 #home, #map {
@@ -543,10 +541,7 @@ body{
     color: var(--BgColour);
 }
 
-.homelink:hover, .titlebox:hover, .dropdown:hover {
-    background-color: var(--DarkBluePrimary);
-    color: #4A69A6;
-}
+
 
 .homelink:active, .titlebox:active {
     background-color: var(--AccentYellow);
@@ -632,7 +627,6 @@ body{
     color: #071021;
 }
 
-
 .eventboxhome a:hover, .favoritesbox a:hover {
     color: var(--BgColour);
 }
@@ -667,7 +661,7 @@ body{
 }
 
 @media screen and (max-width: 767px) {
-    #footer-maps a, #footer-home a, #footer-events a, #footer-favorites a {
+    #footerText{
         display:none;
     }
 
