@@ -647,7 +647,7 @@ body{
 #mapimage2 {
     width: 94%;
     margin-left: 3%;
-    padding-top: 25%;
+    padding-top: 10%;
 }
 
 @media screen and (max-width: 767px) {
