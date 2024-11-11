@@ -21,15 +21,17 @@
 }
 
 body{
-    height: 100vh;
+    min-height: 100vh;
     width:100%;
     display: flex;
     flex-direction: column;
+    
 }
 #footerPlaceholder{
     position:fixed;
     bottom:0;
     width:100%;
+
 
 }
 /* Navbar Before Login */
@@ -435,7 +437,7 @@ body{
 /* footer */
 #footer {
     background-color: var(--DarkBluePrimary);
-    padding: 1vh 2vw;
+    padding: 1vh 2vw 0;
     width:100%;
 }
 #footerfeatures {
@@ -446,24 +448,25 @@ body{
 }
 #footer-maps, #footer-home, #footer-events, #footer-favorites{
     display:flex;
-    flex-direction: row;
-    text-align: left;
+    flex-direction: column;
     cursor: pointer;
     justify-content: center;
     align-items: center;
     height:auto;
-    width:20em;
-    gap:1em;  
+    width:20em;  
+    text-decoration: none;
+    filter: invert(50%) brightness(160%);
 }
 #footer-maps:hover,
 #footer-home:hover,
 #footer-events:hover, #footer-favorites:hover {
-    filter:brightness(120%)
+    filter: invert(50%) brightness(100%);
 }
 #footerText {
-    text-decoration:none;
     color:var(--BgColour);
-    font-size: 3vw;
+    font-size: 1em;
+    text-align: center;
+    filter:brightness(70%);
 }
 /* map/home page */
 #home, #map {
@@ -475,12 +478,10 @@ body{
 .titlebox {
     background-color: var(--DarkBluePrimary);
     color: var(--BgColour);
-    font-size: 80px;
+    font-size: 7vw;
     text-decoration: none;
     border-radius: 1em;
-    min-width: 80%;
     width: 80%;
-    max-width: 80%;
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
@@ -490,12 +491,10 @@ body{
 .dropdown {
     background-color: var(--DarkBluePrimary);
     color: var(--BgColour);
-    font-size: 80px;
+    font-size: 7vw;
     text-decoration: none;
     border-radius: 1em;
-    min-width: 80%;
     width: 80%;
-    max-width: 80%;
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
@@ -504,14 +503,10 @@ body{
 .dropdown-content a {
     background-color: var(--BgColour);
     color: #090f1a;
-    font-size: 80px;
+    font-size: 7vw;
     text-decoration: none;
-    padding-left: 32%;
-    padding-right: 32%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    padding:2% 32%;
+    margin:2% 0;
     justify-content: center;
     text-align: center;
 }
@@ -519,12 +514,10 @@ body{
 .dropbtn{
     background-color: var(--DarkBluePrimary);
     color: var(--BgColour);
-    font-size: 80px;
+    font-size: 7vw;
     text-decoration: none;
     border-radius: 1em;
-    min-width: 100%;
     width: 100%;
-    max-width: 100%;
     justify-content: center;
 }
 
@@ -545,27 +538,22 @@ body{
 
 
 
-.homelink:active, .titlebox:active {
+.titlebox:active {
     background-color: var(--AccentYellow);
-    color: #4A69A6;
+}
+.homelink:active{
+    color:var(--DarkBgColor);
 }
 
-.arrowdown {
-    float: right;
-    padding-right: 3%;
-    justify-content: center;
-    padding-top: 5%;
+.arrow{
+    position: absolute;
+    left:85%;
+    width:3vw;
+    height:auto;
+    transform: translate(-50%, 80%);
 }
-
-.arrow {
-    float: right;
-    padding-right: 3%;
-    justify-content: center;
-    padding-top: 3%;
-}
-
 #eventboxeshome {
-    display: inline-block;
+    display: flex;
     justify-content: center;
     text-align: center;
     
@@ -576,41 +564,30 @@ body{
     background-color: var(--DarkBgColor);
     color: #090f1a;
     width: 60%;
-    height: 250px;
+    height: 15vh;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: 1%;
-    margin-left: 1%;
     border-radius: 2em;
     padding-bottom: 2%;
     padding-top: 2%;
     text-align: center;
     min-width: 64%;
-    margin-left: 18%;
-    margin-right: 18%;
-}
-
-.favoritesbox p {
-    font-size: 36px;
-    padding:2% 1%;
-    color:var(--BgColour)
+    margin:2vh 18vw;
 }
 
 .eventboxhome {
-    display: inline-block;
+    display: flex;
     background-color:var(--DarkBgColor) ;
     color: var(--BgColour);
     width: 30%;
-    height: auto;
+    height: 50%;
     justify-content: center;
     margin: 2em 2em;
     border-radius: 2em;
-    padding:2% 2%;
+    padding: 2vh;
 }
 
 .eventboxhome a, .favoritesbox a {
-    font-size: 50px;
+    font-size: 2em;
     text-decoration: none;
     font-weight: bold;
 }
@@ -627,9 +604,10 @@ body{
     filter:opacity(20%);
 }
 
-.eventboxhome p {
-    font-size: 36px;
+.eventboxhome p, .favoritesbox p {
+    font-size: 0.6em;
     padding: 2% 2%;
+    font-weight: 200;
 }
 
 .boxarrow, .favoritesarrow {
@@ -677,9 +655,14 @@ body{
     box-sizing: border-box;
 }
 
+
 @media screen and (max-width: 767px) {
     #footerText{
         display:none;
+    }
+
+    #footer{
+        padding-bottom: 1vh;
     }
 
     #mapLanding, #eventLanding, #Welcome_msg{
@@ -700,6 +683,14 @@ body{
     }
 }
 
+.arrowdown{
+    position: absolute;
+    top:50%;
+    left:87%;
+    width:4vw;
+    height:auto;
+
+}
 .dropdown {
     position: relative;
     display: inline-block;
