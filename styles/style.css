@@ -648,6 +648,33 @@ body{
     width: 94%;
     margin-left: 3%;
     padding-top: 10%;
+    box-sizing: border-box;
+}
+
+.img-zoom-container {
+    position: relative;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 15%;
+    height: 15%;
+    box-sizing: border-box;
+}
+
+.img-zoom-result {
+    border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    width: 900px;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: 40px;
+    height: 500px;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 767px) {
