@@ -363,7 +363,7 @@ body{
 #eventImg{
     width:fit-content;
     height:fit-content;
-    padding: 1vh 0 1vh 0;
+    padding: 1vh 0;
 }
 #FavoriteButton{
     width:100%;
@@ -375,7 +375,7 @@ body{
 }
 #AddFavorite{
     border: black solid 0.2vw;
-    padding: 2vh 5vw 02vh 5vw;
+    padding: 2vh 5vw;
     font-weight: bold;
     font-size: 3vh;
     border-radius: 1em;
@@ -403,7 +403,7 @@ body{
     margin-top: 2vh;
     width: 100%;
     height: auto;
-    padding: 0 4vw 0 4vw;
+    padding: 0 4vw;
     text-align: left;
     display: flex;
     flex-direction: column;
