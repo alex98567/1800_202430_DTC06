@@ -654,15 +654,14 @@ body{
 
 @media screen and (max-width: 767px) {
     body{
-        padding-bottom: 9vh;
+        padding-bottom: 7vh;
     }
     #footerText{
         display:none;
     }
 
     #footer{
-        padding-bottom: 1vh;
-        height:8vh;
+        height:7vh;
     }
 
     #mapLanding, #eventLanding, #Welcome_msg{
