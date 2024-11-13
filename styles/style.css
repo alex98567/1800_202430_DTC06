@@ -13,6 +13,7 @@
     --AccentYellow: #F4C949;
     --DarkBluePrimary: #090f1a;
     --DarkBgColor: #0d131d;
+    --darker: #040913;
 }
 #navbarPlaceholder{
     position: sticky;
@@ -26,6 +27,7 @@ body{
     display: flex;
     flex-direction: column;
     padding-bottom: 11vh;
+    background-color: var(--BgColour);
 }
 #footerPlaceholder{
     position:fixed;
@@ -115,12 +117,12 @@ body{
     overflow: hidden;
     flex-shrink: 0;
     background-size: cover;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 20.9%, #090f1a 100%), url(../images/BCIT_DTC_BGIMG.jpg);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 20.9%, var(--DarkBluePrimary) 100%), url(../images/BCIT_DTC_BGIMG.jpg);
 
 }
 
 #landingBody{
-    background-color: #090f1a;
+    background-color: var(--DarkBluePrimary);
     color:white;
 }
 
@@ -165,8 +167,8 @@ body{
 
 #BG_fade {
     height:fit-content;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 1%, #090f1a 100%);
-    background-color: #090f1a;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 1%, var(--DarkBluePrimary) 100%);
+    background-color: var(--DarkBluePrimary);
     padding-top: 10em;
 }
 
@@ -182,7 +184,8 @@ body{
 #mapLanding p,
 #eventLanding p {
     width:30%;
-    padding-left: 2em;
+    padding-left: 1vw;
+    font-weight: 300;
 }
 
 #mapLanding h1,
@@ -196,17 +199,50 @@ body{
     width:100%;
     height:fit-content;
     padding: 1vh 1vw 0 1vh;
-    background-color: #040913;
+    background-color: var(--darker);
     display: flex;
     justify-content: space-between;
     gap:2em;
     align-items: start;
-    position: relative;
+    position: absolute;
+    bottom:-100;
+    font-weight: 200;
+}
+
+#joinLanding {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:auto;
+    margin:10vh 0;
+}
+#joinLanding h1{
+    font-weight: 800;
+    font-size: 10vw;
+}
+
+#joinButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:8vw;
+    margin-top: 1vh;
+}
+#joinButtons button{
+    background-color: var(--AccentYellow);
+    border:none;
+    padding: 0.3em 3em;
+    border-radius: 3vw;
+    font-weight: 900;
+    font-size: 2vw;
 }
 
 #copyright{
     position: absolute;
     bottom:0;
+    font-size: 1vw;
 }
 
  #landingAbout, #landingContact{
