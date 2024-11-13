@@ -520,16 +520,21 @@ body{
     margin-right: 10%;
     margin-top: 1em;
 }
-
+#floors{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .dropdown {
     background-color: var(--DarkBluePrimary);
     color: var(--BgColour);
     font-size: 7vw;
     text-decoration: none;
     border-radius: 1em;
-    width: 80%;
+    width: 60%;
     justify-content: center;
-    margin: 0 10%;
+    margin: 2% 10% 0;
 }
 
 .dropdown-content a {
@@ -648,11 +653,6 @@ body{
     padding-top: 20px;
 }
 
-#mapimage {
-    width: 80%;
-    margin-left: 10%;
-    padding-top: 50px;
-}
 
 #mapimage2 {
     width: 94%;
@@ -665,6 +665,9 @@ body{
     position: relative;
     box-sizing: border-box;
     justify-content: center;
+    display:flex;
+    flex-direction: column;
+    width:50%;
 }
 
 .img-zoom-lens {
@@ -679,11 +682,10 @@ body{
 .img-zoom-result {
     border: 1px solid #d4d4d4;
     /*set the size of the result div:*/
-    width: 90vw;
+    width: 100%;
     justify-content: center;
-    margin-top: 10%;
-    margin-left: 5vw;
     height: 40vh;
+    margin-top: 5vh;
     box-sizing: border-box;
 }
 
