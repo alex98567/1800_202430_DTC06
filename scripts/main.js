@@ -63,12 +63,14 @@ function displayCardsDynamically(collection) {
     .then(allEvents => {
       allEvents.forEach(doc => { //iterate thru each doc
         var title = doc.data().name;       // get value of the "name" key
-        var details = doc.data().details;  // get value of the "details" key
+        var details = doc.data().details;
+        var docID = doc.id;
         let newcard = cardTemplate.content.cloneNode(true); // Clone the HTML template to create a new card (newcard) that will be filled with Firestore data.
 
         //update title and text and image
         newcard.querySelector('#eventTitle').innerHTML = title;
         newcard.querySelector('#eventBriefDescription').innerHTML = details;
+        newcard.querySelector('#eventButton').href = "event.html?docID="+docID;
         document.getElementById("eventItemList").appendChild(newcard);
 
       })
@@ -135,3 +137,5 @@ function imageZoom(imgID, resultID) {
 
 // Initiate zoom effect:
 imageZoom("mapimage2", "myresult");
+
+
