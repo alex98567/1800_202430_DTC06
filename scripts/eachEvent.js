@@ -21,3 +21,31 @@ function displayEventInfo() {
         } );
 }
 displayEventInfo();
+
+
+function addToFavorites(){
+    firebase.auth().onAuthStateChanged(user =>{
+        if (user){
+            
+            let params = new URL(window.location.href);
+            let ID = params.searchParams.get("docID");
+            userID = db.collection("users").doc(user.uid);
+            userID.update({
+                favorites: firebase.firestore.FieldValue.arrayUnion(ID)
+            })
+            .then(() =>{
+                favoriteButton = document.getElementById("AddFavorite");
+                if (favoriteButton){
+                    favoriteButton.innerHTML= "Remove from Favorites"
+                }
+            })
+            
+        }
+        else{
+            alert("Error! No user signed in!")
+        }
+        
+    })
+
+}
+
