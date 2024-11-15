@@ -51,3 +51,7 @@ function saveUserInfo() {
 })
     document.getElementById('personalInfoFields').disabled = true;
 }
+
+function redirectToSettings() {
+        window.location.href = 'settings.html';
+    }
