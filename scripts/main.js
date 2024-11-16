@@ -74,64 +74,64 @@ function displayCardsDynamically(collection) {
 
 displayCardsDynamically("Events");
 
-function imageZoom(imgID, resultID) {
-  var img, lens, result, cx, cy;
-  img = document.getElementById(imgID);
-  result = document.getElementById(resultID);
-  /*create lens:*/
-  lens = document.createElement("DIV");
-  lens.setAttribute("class", "img-zoom-lens");
-  /*insert lens:*/
-  img.parentElement.insertBefore(lens, img);
-  /*calculate the ratio between result DIV and lens:*/
-  cx = result.offsetWidth / lens.offsetWidth;
-  cy = result.offsetHeight / lens.offsetHeight;
-  /*set background properties for the result DIV:*/
-  result.style.backgroundImage = "url('" + img.src + "')";
-  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
-  /*execute a function when someone moves the cursor over the image, or the lens:*/
-  lens.addEventListener("mousemove", moveLens);
-  img.addEventListener("mousemove", moveLens);
-  /*and also for touch screens:*/
-  lens.addEventListener("touchmove", moveLens);
-  img.addEventListener("touchmove", moveLens);
-  function moveLens(e) {
-    var pos, x, y;
-    /*prevent any other actions that may occur when moving over the image:*/
-    e.preventDefault();
-    /*get the cursor's x and y positions:*/
-    pos = getCursorPos(e);
-    /*calculate the position of the lens:*/
-    x = pos.x - (lens.offsetWidth / 2);
-    y = pos.y - (lens.offsetHeight / 2);
-    /*prevent the lens from being positioned outside the image:*/
-    if (x > img.width - lens.offsetWidth) { x = img.width - lens.offsetWidth; }
-    if (x < 0) { x = 0; }
-    if (y > img.height - lens.offsetHeight) { y = img.height - lens.offsetHeight; }
-    if (y < 0) { y = 0; }
-    /*set the position of the lens:*/
-    lens.style.left = x + "px";
-    lens.style.top = y + "px";
-    /*display what the lens "sees":*/
-    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
-  }
-  function getCursorPos(e) {
-    var a, x = 0, y = 0;
-    e = e || window.event;
-    /*get the x and y positions of the image:*/
-    a = img.getBoundingClientRect();
-    /*calculate the cursor's x and y coordinates, relative to the image:*/
-    x = e.pageX - a.left;
-    y = e.pageY - a.top;
-    /*consider any page scrolling:*/
-    x = x - window.pageXOffset;
-    y = y - window.pageYOffset;
-    return { x: x, y: y };
-  }
-}
+// function imageZoom(imgID, resultID) {
+//   var img, lens, result, cx, cy;
+//   img = document.getElementById(imgID);
+//   result = document.getElementById(resultID);
+//   /*create lens:*/
+//   lens = document.createElement("DIV");
+//   lens.setAttribute("class", "img-zoom-lens");
+//   /*insert lens:*/
+//   img.parentElement.insertBefore(lens, img);
+//   /*calculate the ratio between result DIV and lens:*/
+//   cx = result.offsetWidth / lens.offsetWidth;
+//   cy = result.offsetHeight / lens.offsetHeight;
+//   /*set background properties for the result DIV:*/
+//   result.style.backgroundImage = "url('" + img.src + "')";
+//   result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+//   /*execute a function when someone moves the cursor over the image, or the lens:*/
+//   lens.addEventListener("mousemove", moveLens);
+//   img.addEventListener("mousemove", moveLens);
+//   /*and also for touch screens:*/
+//   lens.addEventListener("touchmove", moveLens);
+//   img.addEventListener("touchmove", moveLens);
+//   function moveLens(e) {
+//     var pos, x, y;
+//     /*prevent any other actions that may occur when moving over the image:*/
+//     e.preventDefault();
+//     /*get the cursor's x and y positions:*/
+//     pos = getCursorPos(e);
+//     /*calculate the position of the lens:*/
+//     x = pos.x - (lens.offsetWidth / 2);
+//     y = pos.y - (lens.offsetHeight / 2);
+//     /*prevent the lens from being positioned outside the image:*/
+//     if (x > img.width - lens.offsetWidth) { x = img.width - lens.offsetWidth; }
+//     if (x < 0) { x = 0; }
+//     if (y > img.height - lens.offsetHeight) { y = img.height - lens.offsetHeight; }
+//     if (y < 0) { y = 0; }
+//     /*set the position of the lens:*/
+//     lens.style.left = x + "px";
+//     lens.style.top = y + "px";
+//     /*display what the lens "sees":*/
+//     result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+//   }
+//   function getCursorPos(e) {
+//     var a, x = 0, y = 0;
+//     e = e || window.event;
+//     /*get the x and y positions of the image:*/
+//     a = img.getBoundingClientRect();
+//     /*calculate the cursor's x and y coordinates, relative to the image:*/
+//     x = e.pageX - a.left;
+//     y = e.pageY - a.top;
+//     /*consider any page scrolling:*/
+//     x = x - window.pageXOffset;
+//     y = y - window.pageYOffset;
+//     return { x: x, y: y };
+//   }
+// }
 
-// Initiate zoom effect:
-imageZoom("mapimage2", "myresult");
+// // Initiate zoom effect:
+// imageZoom("mapimage2", "myresult");
 
 var count = 0;
 function floorList(){
@@ -150,18 +150,45 @@ function floorList(){
 }
 
 
-// function ImgZoom(imgID, resultID){
-//   img = document.getElementById(imgID);
+function ImgZoom(imgID, resultID) {
+  const img = document.getElementById(imgID);
+  const result = document.getElementById(resultID);
 
-//   img.addEventListener("mousemove", function (e) {
-//     let x_coord = e.clientX;
-//     let y_coord = e.clientY;
-//     console.log(x_coord)
+  result.style.display = 'none'; 
+  result.style.backgroundSize = `${img.width * 2}px ${img.height * 2}px`; 
 
-//     result = document.getElementById(resultID);
-//     result.style.left = `${x_coord}px`;
-//     result.style.top = `${y_coord}px`;
-//   })
-// }
+  img.addEventListener('mousemove', function (e) {
+    const imgRect = img.getBoundingClientRect();
+    
+    const x = e.clientX - imgRect.left;
+    const y = e.clientY - imgRect.top;
 
-// ImgZoom('mapimage2', 'myresult');
+    const lensWidth = 100; 
+    const lensHeight = 100; 
+
+    result.style.display = 'block';
+    result.style.width = `${lensWidth}px`;
+    result.style.height = `${lensHeight}px`;
+    result.style.left = `${x - lensWidth / 2}px`; 
+    result.style.top = `${y - lensHeight / 2}px`; 
+
+    
+    const zoomLevel = 2;  
+
+    const bgPosX = (x * zoomLevel - lensWidth / 2);
+    const bgPosY = (y * zoomLevel - lensHeight / 2);
+
+    
+    result.style.backgroundImage = `url('${img.src}')`; 
+    result.style.backgroundPosition = `-${bgPosX}px -${bgPosY}px`; 
+    
+    result.style.backgroundSize = `${img.width * zoomLevel}px ${img.height * zoomLevel}px`; 
+  });
+
+  
+  img.addEventListener('mouseleave', function () {
+    result.style.display = 'none';
+  });
+}
+
+ImgZoom('mapimage2', 'myresult');

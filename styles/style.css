@@ -30,6 +30,7 @@ body{
     flex-direction: column;
     padding-bottom: 11vh;
     background-color: var(--BgColour);
+    overflow-x:hidden;
 }
 #footerPlaceholder{
     position:fixed;
@@ -694,7 +695,7 @@ body{
 
 #mapimage2 {
     width: 100%;
-    height:40vh;
+    height:50%;
     margin-top: 4vh;
 }
 
@@ -708,27 +709,17 @@ body{
     padding:0 20vw;
 }
 
-.img-zoom-lens {
-    position: absolute;
-    /* border: 1px solid #d4d4d4; */
-    /*set the size of the lens:*/
-    width: 15rem;
-    height: 15rem;
-    box-sizing: border-box;
-}
-
 #myresult {
     border: 5px solid black;
-    /*set the size of the result div:*/
-    width: 10%;
-    justify-content: center;
-    height:10vh;
-    margin-top: 5vh;
-    box-sizing: border-box;
-    top:50%;
-    left:50%;
-    transform:translate(-40%, -50%);
+    width: 6em;
+    height:6em;
     position: absolute;
+    border: 3px solid #000;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: none;
+    display: none;
+    pointer-events: none; 
+    transform: translate(260%, 310%);
 }
 
 
