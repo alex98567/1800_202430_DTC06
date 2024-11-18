@@ -76,7 +76,7 @@ function getEvents(user) {
 
             // Get pointer the new card template
             let newcardTemplate = document.getElementById("favoritesbox");
-
+            console.log(newcardTemplate);
             // Iterate through the ARRAY of bookmarked hikes (document ID's)
             bookmarks.forEach(eventID => {
                 console.log(eventID);
@@ -99,3 +99,5 @@ function getEvents(user) {
             });
         })
 }
+
+getEvents()
