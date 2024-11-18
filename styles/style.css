@@ -624,7 +624,7 @@ body{
     margin:3vh 11vw;
 }
 
-.favoritesbox {
+#favoritesbox {
     display: inline-block;
     background-color: var(--DarkBgColor);
     color: #090f1a;
@@ -657,25 +657,25 @@ body{
     font-size: 32px;
 }
 
-.eventboxhome a, .favoritesbox a {
+.eventboxhome a, #favoritesbox a {
     font-size: 2em;
     text-decoration: none;
     font-weight: bold;
 }
 
-.eventboxhome a:link, .favoritesbox a:link {
+.eventboxhome a:link, #favoritesbox a:link {
     color: var(--BgColour);
 }
 
-.eventboxhome a:visited, .favoritesbox a:visited {
+.eventboxhome a:visited, #favoritesbox a:visited {
     color: var(--BgColour);
 }
 
-.eventboxhome a:hover, .favoritesbox a:hover {
+.eventboxhome a:hover, #favoritesbox a:hover {
     filter:opacity(20%);
 }
 
-.eventboxhome p, .favoritesbox p {
+.eventboxhome p, #favoritesbox p {
     font-size: 0.6em;
     padding: 2% 2%;
     font-weight: 200;

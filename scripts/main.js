@@ -26,17 +26,18 @@
 // Function to read the quote of the day from the Firestore "quotes" collection
 // Input param is the String representing the day of the week, aka, the document name
 
-function readMap(map) {
-  db.collection("floor plans").doc(map) //name of the collection and documents should matach excatly with what you have in Firestore
-    .onSnapshot(mapDoc => {
-      //arrow notation
-      console.log("current document data: " + mapDoc.data()); //.data() returns data object
-      document.getElementById("floor-plan-goes-here").innerHTML = mapDoc.data().floorplan; //using javascript to display the data on the right place
-    }, (error) => {
-      console.log("Error calling onSnapshot", error);
-  });
-}
-readMap("floor1"); //calling the function
+// function readMap(map) {
+//   db.collection("floor plans").doc(map) //name of the collection and documents should matach excatly with what you have in Firestore
+//     .onSnapshot(mapDoc => {
+//       //arrow notation
+//       console.log("current document data: " + mapDoc.data()); //.data() returns data object
+//       document.getElementById("floor-plan-goes-here").innerHTML = mapDoc.data().floorplan; //using javascript to display the data on the right place
+//       console.log("floor-plan-goes-here");
+//     }, (error) => {
+//       console.log("Error calling onSnapshot", error);
+//   });
+// }
+// readMap("floor1"); //calling the function
 
 function writeEventLoop(max) {
   //define a variable for the collection you want to create in Firestore to populate data
@@ -150,45 +151,3 @@ function floorList(){
 }
 
 
-function ImgZoom(imgID, resultID) {
-  const img = document.getElementById(imgID);
-  const result = document.getElementById(resultID);
-
-  result.style.display = 'none'; 
-  result.style.backgroundSize = `${img.width * 2}px ${img.height * 2}px`; 
-
-  img.addEventListener('mousemove', function (e) {
-    const imgRect = img.getBoundingClientRect();
-    
-    const x = e.clientX - imgRect.left;
-    const y = e.clientY - imgRect.top;
-
-    const lensWidth = 100; 
-    const lensHeight = 100; 
-
-    result.style.display = 'block';
-    result.style.width = `${lensWidth}px`;
-    result.style.height = `${lensHeight}px`;
-    result.style.left = `${x - lensWidth / 2}px`; 
-    result.style.top = `${y - lensHeight / 2}px`; 
-
-    
-    const zoomLevel = 2;  
-
-    const bgPosX = (x * zoomLevel - lensWidth / 2);
-    const bgPosY = (y * zoomLevel - lensHeight / 2);
-
-    
-    result.style.backgroundImage = `url('${img.src}')`; 
-    result.style.backgroundPosition = `-${bgPosX}px -${bgPosY}px`; 
-    
-    result.style.backgroundSize = `${img.width * zoomLevel}px ${img.height * zoomLevel}px`; 
-  });
-
-  
-  img.addEventListener('mouseleave', function () {
-    result.style.display = 'none';
-  });
-}
-
-ImgZoom('mapimage2', 'myresult');
