@@ -452,7 +452,6 @@ body{
 #Favorites{
     margin-top: 3vh;
 }
-
 #FavoriteEvents{
     display: flex;
     flex-direction: column;
@@ -466,20 +465,23 @@ body{
     font-size: 3vh;
     margin: 1vh 6vw 0vh;
     width: 100%;
-    height: auto;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
-    align-items: center;
+    align-items:center;
+    text-overflow: ellipsis;
     cursor:pointer;
     background-color: var(--DarkBluePrimary);
     border-radius: 2em;
-    padding: 1vh 2vw;
+    padding: 2vh 4vw 0vh;
 }
-#favoriteEvent li{
+#favoriteEvent p{
     color:white;
-    width:100%;
+    width:50%;
+    font-size: 3vw;
+    text-align: center;
     height:auto;
 }
 #favoriteEvent div{
