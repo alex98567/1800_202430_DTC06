@@ -66,15 +66,15 @@ function addToFavorites() {
 //----------------------------------------------------------
 // Supposed to get event and display on home page in the favorites box
 //----------------------------------------------------------
-function getEvents(user) {
-    db.collection("users").doc(user.uid).get()
-        .then(userDoc => {
+// function getEvents(user) {
+//     db.collection("users").doc(user.uid).get()
+//         .then(userDoc => {
 
-//             // Get the Array of bookmarks
-            var favorites = userDoc.data().favorites;
-            console.log(favorites);
+//              // Get the Array of bookmarks
+//             var favorites = userDoc.data().favorites;
+//             console.log(favorites);
 
-            // Get pointer the new card template
+//             // Get pointer the new card template
 //             let newcardTemplate = document.getElementById("favoritesbox");
 //             console.log(newcardTemplate);
 //             // Iterate through the ARRAY of bookmarked hikes (document ID's)
