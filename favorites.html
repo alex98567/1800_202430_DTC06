@@ -33,14 +33,10 @@
     </header>
     <main>
         <div id="FavoriteEvents">
-            <ul id="favoriteEvent">
-                <li>Event 1 <div>Remove</div></li>
-                <li>Event 2 <div>Remove</div></li>
-                <li>Event 3 <div>Remove</div></li>
-                <li>Event 4 <div>Remove</div></li>
-                <li>Event 5 <div>Remove</div></li>
-                <li>Event 6 <div>Remove</div></li>
-            </ul>
+            <template id="favoriteEvent">
+                <p id="eventTitle">Event 1</p>
+                <div id="removeBtn">Remove</div>
+            </template>
         </div>
     </main>
 
@@ -48,5 +44,6 @@
     <script src="./scripts/firebaseAPI_TEAM99.js"></script>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/skeleton.js"></script>
+    <script src="./scripts/favorites.js"></script>
 </body>
 </html>

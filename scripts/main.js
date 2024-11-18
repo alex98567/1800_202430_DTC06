@@ -58,7 +58,7 @@ function displayCardsDynamically(collection) {
     .then(allEvents => {
       allEvents.forEach(doc => { //iterate thru each doc
         var title = doc.data().name;       // get value of the "name" key
-        var details = doc.data().details;
+        var details = doc.data().description;
         var docID = doc.id;
         let newcard = cardTemplate.content.cloneNode(true); // Clone the HTML template to create a new card (newcard) that will be filled with Firestore data.
 
