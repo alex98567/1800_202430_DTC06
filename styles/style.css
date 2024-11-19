@@ -233,10 +233,10 @@ body{
 #joinButtons a{
     background-color: var(--AccentYellow);
     border:none;
-    padding: 0.5em 3em;
+    padding: 0.3em 3em;
     border-radius: 3vw;
     font-weight: 600;
-    font-size: 3vw;
+    font-size: 2vw;
     color:var(--DarkBgColor);
     text-decoration: none;
 }
