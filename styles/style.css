@@ -494,6 +494,7 @@ body{
     background-color: transparent;
     border:none;
     outline:none;
+    user-select: none;
 }
 #favoriteEvent:hover{
     filter: brightness(160%);
