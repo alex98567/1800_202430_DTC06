@@ -1,26 +1,26 @@
-function displayEventInfo() {
-    let params = new URL( window.location.href ); 
-    let ID = params.searchParams.get( "docID" ); 
-    // console.log( ID );
+// function displayEventInfo() {
+//     let params = new URL( window.location.href ); 
+//     let ID = params.searchParams.get( "docID" ); 
+//     // console.log( ID );
 
-    db.collection("Events")
-        .doc(ID)
-        .get()
-        .then(doc => {
-            thisEvent = doc.data();
-            eventDescription = thisEvent.description;
-            eventName = thisEvent.name;
-            eventImage = thisEvent.image;
+//     db.collection("Events")
+//         .doc(ID)
+//         .get()
+//         .then(doc => {
+//             thisEvent = doc.data();
+//             eventDescription = thisEvent.description;
+//             eventName = thisEvent.name;
+//             eventImage = thisEvent.image;
 
 
-            document.getElementById("eventTitleName").innerHTML = eventName;
-            document.getElementById("EventText").innerHTML = eventDescription;
-            if (eventImg) {
-                document.querySelector("#eventImg").src = eventImage;
-            }
-        });
-}
-displayEventInfo();
+//             document.getElementById("eventTitleName").innerHTML = eventName;
+//             document.getElementById("EventText").innerHTML = eventDescription;
+//             if (eventImg) {
+//                 document.querySelector("#eventImg").src = eventImage;
+//             }
+//         });
+// }
+// displayEventInfo();
 
 counter = 0
 function addToFavorites() {
@@ -100,3 +100,36 @@ function addToFavorites() {
 //             });
 //         })
 // }
+function homeFavorites() {
+    firebase.auth().onAuthStateChanged(user => {
+        db.collection("users").doc(user.uid).get().then(userDoc => {
+            let favoritesarray = userDoc.data().favorites;
+
+            console.log(favoritesarray);
+
+            let favoriteCards = document.getElementById("favoritesbox");
+
+            favoritesarray.forEach(eventID => {
+                console.log(eventID);
+                db.collection("Events").doc(eventID).get().then(favdoc => {
+                    if (favdoc.exists) {
+                        console.log(favdoc);
+                        var name = favdoc.data().name;
+                        var details = favdoc.data().description
+                        var docID = favdoc.id;
+                        console.log(name);
+
+                        //let newfav = favoriteCards.content.cloneNode(true);
+                        "favoritesbox-name".innerHTML = name;
+                        newfav.querySelector("favoritesbox-details").innerHTML = details
+                        newfav.querySelector("a").href = "event.html?docID=" + eventID;
+
+                        let favoritecardsgroup = document.getElementById("FavoriteEvents");
+                        favoritecardsgroup.appendChild(newcard);
+                    }
+                })
+            })
+        })
+    })
+}
+homeFavorites();
