@@ -5,7 +5,7 @@ function homeFavorites() {
 
             console.log(favoritesarray);
 
-            let favoriteCards = document.getElementById("favoriteTemplateHome");
+            let favoriteCards = document.getElementById("favoritesbox");
 
             favoritesarray.forEach(eventID => {
                 console.log(eventID);
@@ -18,6 +18,7 @@ function homeFavorites() {
                         console.log(name);
                         console.log(details)
 
+                        document.getElementById("noFavMessage").style = "display:none"
                         let newfav = favoriteCards.content.cloneNode(true);
                         newfav.querySelector(".favoritesbox-name").innerHTML = name;
                         newfav.querySelector(".favoritesbox-details").innerHTML = details
