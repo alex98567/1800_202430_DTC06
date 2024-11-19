@@ -398,22 +398,23 @@ body{
     display:flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     margin-top: 2em;
-    gap: 2vw;
+    gap: 3vw;
 }
 #EventName svg{
-    min-width: 2.2em;
+    min-width: 6vw;
     cursor: pointer;
     height: auto;
     padding-bottom: 0.5vh;
 }
 #EventName h1{
     font-size: 7vw;
+    text-align: center;
 }
 #EventDescription{
     display: flex;
-    padding: 2vh 15vw 0 15vw;
+    padding: 2vh 15vw 0;
     position: relative;
     height:auto;
     flex-direction: column;

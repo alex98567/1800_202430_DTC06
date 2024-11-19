@@ -8,7 +8,7 @@ function displayEventInfo() {
         .get()
         .then(doc => {
             thisEvent = doc.data();
-            eventDescription = thisEvent.details;
+            eventDescription = thisEvent.description;
             eventName = thisEvent.name;
             eventImage = thisEvent.image;
 
@@ -20,7 +20,7 @@ function displayEventInfo() {
             }
         });
 }
-// displayEventInfo();
+displayEventInfo();
 
 counter = 0
 function addToFavorites() {
