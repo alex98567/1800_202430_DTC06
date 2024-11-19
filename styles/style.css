@@ -340,7 +340,10 @@ body{
     display:grid;
     grid-template-columns: repeat(2, auto);
     gap:1vh;
+    box-sizing: border-box;
+    padding: 0vh 10vw;
     justify-content: center;
+    width:100%;
     align-content: center;
 }
 
@@ -349,7 +352,7 @@ body{
     border-radius: 1em;
     background-color: var(--darker);
     color:white;
-    width:30vw;
+    width:100%;
     display: flex;
     position: relative;
     height:auto;
@@ -369,15 +372,15 @@ body{
 }
 #buttonwrap{
     width:100%;
-    height:3vh;
+    height:100%;
     display:flex;
     justify-content: right;
-    align-items: center;
+    align-items:end;
 }
 #eventButton{
     width:auto;
-    height:100%;
-    padding:0.5vh 2vw;
+    height:3em;
+    padding:1vw 2vw;
     border:none;
     background-color: var(--AccentYellow);
     border-radius: 1em;
