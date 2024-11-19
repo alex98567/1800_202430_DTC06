@@ -633,12 +633,14 @@ body{
 }
 
 #favoritesbox {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     background-color: var(--DarkBgColor);
     color: #090f1a;
     width: 60%;
-    height: 24vh;
+    height: 24vw;
     justify-content: center;
+    align-items: center;
     border-radius: 2em;
     padding: 2% 0;
     text-align: center;
@@ -652,7 +654,7 @@ body{
     background-color:var(--DarkBgColor) ;
     color: var(--BgColour);
     width: 50%;
-    height: 30vh;
+    height: 30vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
