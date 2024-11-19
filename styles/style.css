@@ -475,17 +475,20 @@ body{
     border-radius: 2em;
     padding: 2vh 4vw 0vh;
 }
-#favoriteEvent p{
+#favoriteEvent a{
     color:white;
     width:80%;
     height:auto;
     font-size: 1.5rem;
     text-align: start;
+    text-decoration: none;
 }
-#favoriteEvent div{
+#favoriteEvent button{
     font-size: 1.2rem;
     padding-bottom: 1em;
     color:white;
+    background-color: transparent;
+    border:none;
 }
 #favoriteEvent:hover{
     filter: brightness(160%);
