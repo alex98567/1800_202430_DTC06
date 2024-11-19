@@ -5,7 +5,7 @@ function homeFavorites() {
 
             console.log(favoritesarray);
 
-            let favoriteCards = document.getElementById("favoritesbox");
+            let favoriteCards = document.getElementById("favoriteTemplateHome");
 
             favoritesarray.forEach(eventID => {
                 console.log(eventID);
