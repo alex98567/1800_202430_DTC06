@@ -28,9 +28,9 @@ function displayFavorites() {
                                     userID.update({
                                         favorites: firebase.firestore.FieldValue.arrayRemove(eventID)
                                     })
-                                    // .then(
-                                    //     window.location.reload()
-                                    // )
+                                    .then(
+                                        alert("Event Removed! Refresh Page to see updated favorites.")
+                                    )
                             })
                         }
                     })
@@ -39,7 +39,3 @@ function displayFavorites() {
     })
 }
 displayFavorites();
-
-function removeEvent() {
-    console.log("hello")
-}
