@@ -652,8 +652,10 @@ body{
     background-color:var(--DarkBgColor) ;
     color: var(--BgColour);
     width: 50%;
-    height: 50%;
+    height: 30vh;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-radius: 2em;
     padding: 2vh;
 }
@@ -684,7 +686,11 @@ body{
 }
 
 .eventboxhome p, #favoritesbox p {
-    font-size: 0.6em;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:100%;
     padding: 2% 2%;
     font-weight: 200;
     color: white;

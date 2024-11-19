@@ -32,3 +32,30 @@ function homeFavorites() {
     })
 }
 homeFavorites();
+
+
+function homeEvents(collection){
+    let cardTemplate = document.querySelector("#eventBoxTemplate");
+
+    db.collection(collection).get()
+    .then(eventdoc => {
+        let count = 0
+        eventdoc.forEach(doc => { 
+            if(count >= 2) return;
+
+            var title = doc.data().name;       
+            var details = doc.data().description;
+            var docID = doc.id;
+                
+            let newcard = cardTemplate.content.cloneNode(true); 
+                
+            newcard.querySelector('#eventName').innerHTML = title;
+            newcard.querySelector('#eventDesc').innerHTML = details;
+            newcard.querySelector('a').href = "event.html?docID="+docID;
+                
+            document.getElementById("eventboxeshome").appendChild(newcard);
+            count++;
+        })
+    })
+}
+homeEvents("Events");
