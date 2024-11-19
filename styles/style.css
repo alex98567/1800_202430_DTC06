@@ -230,13 +230,15 @@ body{
     gap:8vw;
     margin-top: 1vh;
 }
-#joinButtons button{
+#joinButtons a{
     background-color: var(--AccentYellow);
     border:none;
-    padding: 0.3em 3em;
+    padding: 0.5em 3em;
     border-radius: 3vw;
-    font-weight: 900;
-    font-size: 2vw;
+    font-weight: 600;
+    font-size: 3vw;
+    color:var(--DarkBgColor);
+    text-decoration: none;
 }
 
 #copyright{
