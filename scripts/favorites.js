@@ -1,8 +1,8 @@
 function displayFavorites() {
     firebase.auth().onAuthStateChanged(user => {
+        userID = db.collection("users").doc(user.uid);
         db.collection("users").doc(user.uid).get().then(userDoc => {
             let favoritesarray = userDoc.data().favorites;
-
                 console.log(favoritesarray);
                 
                 let favoriteCards = document.getElementById("favoriteTemplate");
@@ -19,9 +19,19 @@ function displayFavorites() {
                             let newcard = favoriteCards.content.cloneNode(true);
                             newcard.querySelector("#eventTitle").innerHTML = title;
                             newcard.querySelector("a").href = "event.html?docID=" + eventID;
-                            
+                            newcard.querySelector(".removeBtn").id = eventID;
                             let favoritecardsgroup = document.getElementById("FavoriteEvents");
                             favoritecardsgroup.appendChild(newcard);
+
+                            removeBtn = document.getElementById(eventID);
+                            removeBtn.addEventListener("click", function(){
+                                    userID.update({
+                                        favorites: firebase.firestore.FieldValue.arrayRemove(eventID)
+                                    })
+                                    // .then(
+                                    //     window.location.reload()
+                                    // )
+                            })
                         }
                     })
                 })
@@ -29,3 +39,7 @@ function displayFavorites() {
     })
 }
 displayFavorites();
+
+function removeEvent() {
+    console.log("hello")
+}
