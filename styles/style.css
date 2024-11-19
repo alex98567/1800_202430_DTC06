@@ -713,6 +713,9 @@ body{
     height:50%;
     margin-top: 4vh;
 }
+#mapimage2:hover{
+    cursor: none;
+}
 
 .img-zoom-container {
     box-sizing: border-box;
