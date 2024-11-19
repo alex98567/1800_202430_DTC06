@@ -302,9 +302,9 @@ body{
 #search{
     min-width:100%;
     padding: 0 5em;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
-    
+    display:none;
 }
 
 #searchBar{
@@ -369,6 +369,7 @@ body{
     padding-top: 2vh;
     font-size:1.5vw;
     font-weight: 300;
+    text-overflow: ellipsis;
 }
 #buttonwrap{
     width:100%;
