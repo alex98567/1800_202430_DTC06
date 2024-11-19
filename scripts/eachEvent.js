@@ -118,14 +118,15 @@ function homeFavorites() {
                         var details = favdoc.data().description
                         var docID = favdoc.id;
                         console.log(name);
+                        console.log(details)
 
-                        //let newfav = favoriteCards.content.cloneNode(true);
-                        "favoritesbox-name".innerHTML = name;
-                        newfav.querySelector("favoritesbox-details").innerHTML = details
+                        let newfav = favoriteCards.content.cloneNode(true);
+                        newfav.querySelector(".favoritesbox-name").innerHTML = name;
+                        newfav.querySelector(".favoritesbox-details").innerHTML = details
                         newfav.querySelector("a").href = "event.html?docID=" + eventID;
 
-                        let favoritecardsgroup = document.getElementById("FavoriteEvents");
-                        favoritecardsgroup.appendChild(newcard);
+                        let favoritecardsgroup = document.getElementById("favoritesbox");
+                        favoritecardsgroup.appendChild(newfav);
                     }
                 })
             })
