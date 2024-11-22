@@ -540,6 +540,7 @@ body{
     text-align: center;
     filter:brightness(70%);
 }
+
 /* map/home page */
 #home, #map {
     background-color: var(--BgColour);
@@ -612,8 +613,6 @@ body{
 .homelink:visited, .titlebox:visited, .dropdown:visited {
     color: var(--BgColour);
 }
-
-
 
 .titlebox:active {
     background-color: var(--AccentYellow);
@@ -721,99 +720,88 @@ body{
     width:100%;
     box-sizing: border-box;
 }
-#logOut{
-    text-decoration: none;
-    color:var(--DarkBgColor);
-    background-color: var(--AccentYellow);
-    padding: 2vh 3vw;
-    margin-left: 2vw;
-    border-radius: 10%;
-}
 
 #mapimage2 {
     width: 100%;
     height:50%;
     margin-top: 4vh;
 }
-/* #mapimage2:hover{
-    cursor: none;
-} */
-
-.img-zoom-container {
-    box-sizing: border-box;
-    justify-content: center;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width:100%;
-    padding:0 20vw;
-}
-
-#myresult {
-    border: 5px solid black;
-    width: 6em;
-    height:6em;
-    position: absolute;
-    border: 3px solid #000;
-    background: rgba(0, 0, 0, 0.3);
-    cursor: none;
-    display: none;
-    pointer-events: none; 
-    transform: translate(260%, 310%);
-}
-
-
-@media screen and (max-width: 767px) {
-    body{
-        padding-bottom: 7vh;
-    }
-    #footerText{
-        display:none;
-    }
-
-    #footer{
-        height:7vh;
-    }
-
-    #mapLanding, #eventLanding, #Welcome_msg{
+   
+    .img-zoom-container {
+        box-sizing: border-box;
         justify-content: center;
+        display:flex;
+        flex-direction: column;
         align-items: center;
-        text-align: center;
-        margin:0;
-        padding:1em 0;
+        width:100%;
+        padding:0 20vw;
+    }
+    
+    #myresult {
+        border: 5px solid black;
+        width: 6em;
+        height:6em;
+        position: absolute;
+        border: 3px solid #000;
+        background: rgba(0, 0, 0, 0.3);
+        cursor: none;
+        display: none;
+        pointer-events: none; 
+        transform: translate(260%, 310%);
+    }
+    
+    
+    @media screen and (max-width: 767px) {
+        body{
+            padding-bottom: 7vh;
+        }
+        #footerText{
+            display:none;
+        }
+        
+        #footer{
+            height:7vh;
+        }
+
+        #mapLanding, #eventLanding, #Welcome_msg{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin:0;
+            padding:1em 0;
+            
+        }
+        
+        #mapLanding, #eventLanding{
+            margin-bottom: 9em;
+        }
+        
+        #mapLanding p, #eventLanding p{
+            width:80%;
+        }
+    }
+    
+    .arrowdown{
+        position: absolute;
+        top:50%;
+        left:87%;
+        width:4vw;
+        height:auto;
         
     }
-
-    #mapLanding, #eventLanding{
-        margin-bottom: 9em;
+    .dropdown {
+        position: relative;
+        display: inline-block;
     }
-
-    #mapLanding p, #eventLanding p{
-        width:80%;
+    
+    .dropdown-content {
+        display:none;
     }
-}
-
-.arrowdown{
-    position: absolute;
-    top:50%;
-    left:87%;
-    width:4vw;
-    height:auto;
-
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display:none;
-}
-
-/* .dropdown:hover .dropdown-content{
-    display:block;
-}
-
-.dropdown:hover .arrowdown{
-    display:none;
-} */
+            #logOut{
+                text-decoration: none;
+                color:var(--DarkBgColor);
+                background-color: var(--AccentYellow);
+                padding: 2vh 3vw;
+                margin-left: 2vw;
+                border-radius: 10%;
+            }

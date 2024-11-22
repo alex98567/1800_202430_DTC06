@@ -1,8 +1,3 @@
-//---------------------------------
-// Your own functions here
-//------------------------------------------------
-// Call this function when the "logout" button is clicked
-//-------------------------------------------------
 function logout() {
   firebase
     .auth()
@@ -16,5 +11,3 @@ function logout() {
       // An error happened.
     });
 }
-//---------------------------------
-
