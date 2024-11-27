@@ -17,7 +17,7 @@ function displayFavorites() {
                             console.log(title);
                             
                             let newcard = favoriteCards.content.cloneNode(true);
-                            newcard.querySelector("#eventTitle").innerHTML = title;
+                            newcard.querySelector("#TitleEvent").innerHTML = title;
                             newcard.querySelector("a").href = "event.html?docID=" + eventID;
                             newcard.querySelector(".removeBtn").id = eventID;
                             let favoritecardsgroup = document.getElementById("FavoriteEvents");
