@@ -749,8 +749,8 @@ body{
     color: var(--BgColour);
 }
 
-.eventboxhome a:hover, #favoritesbox a:hover {
-    filter:opacity(20%);
+.eventboxhome:hover, #favoritesbox:hover {
+    filter:brightness(60%);
 }
 
 .eventboxhome p, #favoritesbox p {

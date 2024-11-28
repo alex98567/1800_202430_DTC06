@@ -29,7 +29,9 @@ function displayFavorites() {
                                         favorites: firebase.firestore.FieldValue.arrayRemove(eventID)
                                     })
                                     .then(
-                                        alert("Event Removed! Refresh Page to see updated favorites.")
+                                        setTimeout(()=>{
+                                            location.replace(location.href)
+                                        },500),
                                     )
                             })
                         }
