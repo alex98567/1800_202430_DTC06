@@ -17,15 +17,15 @@ function displayCardsDynamically(collection) {
         newcard.querySelector('#eventButton').href = "event.html?docID="+docID;
         newcard.querySelector(".addFavorite").id = docID;
         newcard.querySelector(".heartIcon").id = "favorite" + docID;
-        
-        
         firebase.auth().onAuthStateChanged(user =>{
           userID = db.collection("users").doc(user.uid);
           userID.get().then(userDoc =>{
             var favorited = userDoc.data().favorites;
             if (favorited.includes(docID)){
               document.querySelector('#favorite' + docID).className = 'material-symbols-outlined filled heartIcon';
-              counter = 1
+            }
+            else{
+              document.querySelector("#favorite" + docID).className = 'material-symbols-outlined outline heartIcon';
             }
           })
         })
@@ -38,37 +38,40 @@ function displayCardsDynamically(collection) {
 displayCardsDynamically("Events");
 
 
-counter = 0
+
 function addToFavorites(ID) {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
-            counter++;
+          userID = db.collection("users").doc(user.uid);
+          favoriteButton = document.querySelector(".addFavorite");
+          firebase.auth().onAuthStateChanged(user =>{
             userID = db.collection("users").doc(user.uid);
-            favoriteButton = document.querySelector(".addFavorite");
-            if (counter == 1) {
-                userID.update({
-                    favorites: firebase.firestore.FieldValue.arrayUnion(ID)
-                })
-                    .then(() => {
-                        if (favoriteButton) {
-                            console.log("test")
-                        }
-                        alert("Added Event to Favorites!");
-                    })
-            }
-            else if (counter == 2) {
+            userID.get().then(userDoc =>{
+              var favorited = userDoc.data().favorites;
+              if (favorited.includes(ID)) {
                 userID.update({
                     favorites: firebase.firestore.FieldValue.arrayRemove(ID)
                 })
-                    .then(() => {
-                        counter = 0;
-                        console.log(counter)
+                    .then(async() => {
                         if (favoriteButton) {
-                            console.log("test")
+                          console.log("removed")
+                          location.reload(true)
                         }
                     })
             }
-
+            else{
+                userID.update({
+                    favorites: firebase.firestore.FieldValue.arrayUnion(ID)
+                })
+                    .then(async() => {
+                        if (favoriteButton) {
+                          console.log("added")
+                          location.reload(true)
+                        }
+                    })
+            }
+            })
+          })
         }
         else {
             alert("Error! No user signed in!")

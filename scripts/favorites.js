@@ -31,7 +31,7 @@ function displayFavorites() {
                                     .then(
                                         setTimeout(()=>{
                                             location.replace(location.href)
-                                        },500),
+                                        },500)
                                     )
                             })
                         }
