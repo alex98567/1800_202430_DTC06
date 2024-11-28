@@ -28,10 +28,10 @@ function displayFavorites() {
                                     userID.update({
                                         favorites: firebase.firestore.FieldValue.arrayRemove(eventID)
                                     })
-                                    .then(
-                                        setTimeout(()=>{
-                                            location.replace(location.href)
-                                        },500)
+                                    .then(async()=>{
+                                        console.log("removed"),
+                                        location.reload(true)
+                                    }
                                     )
                             })
                         }
