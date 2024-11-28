@@ -337,7 +337,7 @@ body{
 #filters{
     cursor: pointer;
 }
-#eventItemList, #mapPreviewGrid{
+#eventItemList {
     height:fit-content;
     display:grid;
     grid-template-columns: repeat(2, auto);
@@ -350,7 +350,7 @@ body{
     align-content: center;
 }
 
-#eventItem, #mapItem{
+#eventItem {
     padding: 2vh 2vw 0vh;
     border-radius: 1em;
     background-color: var(--darker);
@@ -581,6 +581,30 @@ body{
 
 #mapPreviewGrid {
     margin-top: 1vh;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 1vh;
+    box-sizing: border-box;
+    padding: 0vh 10vw;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    align-content: center;
+}
+
+#mapItem {
+    padding: 1vh 2vw 0vh;
+    border-radius: 1em;
+    background-color: var(--darker);
+    color: white;
+    width: 100%;
+    display: flex;
+    position: relative;
+    height: auto;
+    text-align: left;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 #mapTitle {
