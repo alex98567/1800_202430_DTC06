@@ -1,4 +1,6 @@
 function homeFavorites() {
+    const maxlimit = 1
+    let counter = 0
     firebase.auth().onAuthStateChanged(user => {
         db.collection("users").doc(user.uid).get().then(userDoc => {
             let favoritesarray = userDoc.data().favorites;
@@ -8,9 +10,13 @@ function homeFavorites() {
             let favoriteCards = document.getElementById("favoritesbox");
 
             favoritesarray.forEach(eventID => {
+                if (counter >= maxlimit) {
+                    return;
+                }
                 console.log(eventID);
-                db.collection("Events").doc(eventID).get().then(favdoc => {
-                    if (favdoc.exists) {
+                if (counter < maxlimit){
+                    db.collection("Events").doc(eventID).get().then(favdoc => {
+                    if (favdoc.exists && counter == 0) {
                         console.log(favdoc);
                         var name = favdoc.data().name;
                         var details = favdoc.data().description
@@ -26,8 +32,11 @@ function homeFavorites() {
 
                         let favoritecardsgroup = document.getElementById("favoritesbox");
                         favoritecardsgroup.appendChild(newfav);
+                        counter++
                     }
                 })
+                }
+                
             })
         })
     })
