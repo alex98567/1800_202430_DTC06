@@ -404,7 +404,7 @@ body{
     white-space: nowrap;
     text-align: center;
 }
-#addFavorite{
+.addFavorite{
     height:3vh;
     width:6vw;
     background-color: var(--AccentYellow);

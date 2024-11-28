@@ -15,6 +15,7 @@ function displayCardsDynamically(collection) {
         newcard.querySelector('#eventBriefDescription').innerHTML = details;
         newcard.querySelector("#date").innerHTML = date;
         newcard.querySelector('#eventButton').href = "event.html?docID="+docID;
+        newcard.querySelector(".addFavorite").id = docID;
         document.getElementById("eventItemList").appendChild(newcard);
 
       })
@@ -24,21 +25,19 @@ displayCardsDynamically("Events");
 
 
 counter = 0
-function addToFavorites() {
+function addToFavorites(ID) {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             counter++;
-            let params = new URL(window.location.href);
-            let ID = params.searchParams.get("docID");
             userID = db.collection("users").doc(user.uid);
-            favoriteButton = document.getElementById("addFavorite");
+            favoriteButton = document.querySelector(".addFavorite");
             if (counter == 1) {
                 userID.update({
                     favorites: firebase.firestore.FieldValue.arrayUnion(ID)
                 })
                     .then(() => {
                         if (favoriteButton) {
-                            favoriteButton.innerHTML = "Remove from Favorites"
+                            console.log("test")
                         }
                         alert("Added Event to Favorites!");
                     })
