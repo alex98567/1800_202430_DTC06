@@ -619,6 +619,7 @@ body{
 
 #homeMapImages {
     margin-bottom: 1vh;
+    border-radius: 1em;
 }
 
 #floors{
