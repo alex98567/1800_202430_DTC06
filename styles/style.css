@@ -337,7 +337,7 @@ body{
 #filters{
     cursor: pointer;
 }
-#eventItemList{
+#eventItemList, #mapPreviewGrid{
     height:fit-content;
     display:grid;
     grid-template-columns: repeat(2, auto);
@@ -350,7 +350,7 @@ body{
     align-content: center;
 }
 
-#eventItem{
+#eventItem, #mapItem{
     padding: 2vh 2vw 0vh;
     border-radius: 1em;
     background-color: var(--darker);
@@ -578,6 +578,20 @@ body{
     margin-right: 10%;
     margin-top: 1em;
 }
+
+#mapPreviewGrid {
+    margin-top: 1vh;
+}
+
+#mapTitle {
+    display: flex;
+    justify-content: center;
+}
+
+#homeMapImages {
+    margin-bottom: 1vh;
+}
+
 #floors{
     display:flex;
     flex-direction: column;
