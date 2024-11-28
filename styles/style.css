@@ -346,7 +346,7 @@ body{
     padding: 0vh 10vw;
     justify-content: center;
     align-self: center;
-    width:60%;
+    width:70vw;
     align-content: center;
 }
 
@@ -405,10 +405,14 @@ body{
     text-align: center;
 }
 .addFavorite{
-    height:3vh;
-    width:6vw;
-    background-color: var(--AccentYellow);
     cursor:pointer;
+    border:none;
+    background-color: transparent;
+
+}
+.addFavorite:focus{
+    border:none;
+    outline:none;
 }
 
 #eventButton:active{
@@ -870,3 +874,15 @@ body{
                 margin-left: 2vw;
                 border-radius: 10%;
             }
+
+
+/* Icons */
+
+.material-symbols-outlined {
+    color:white;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
+}
