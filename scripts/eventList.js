@@ -16,6 +16,20 @@ function displayCardsDynamically(collection) {
         newcard.querySelector("#date").innerHTML = date;
         newcard.querySelector('#eventButton').href = "event.html?docID="+docID;
         newcard.querySelector(".addFavorite").id = docID;
+        newcard.querySelector(".heartIcon").id = "favorite" + docID;
+        
+        
+        firebase.auth().onAuthStateChanged(user =>{
+          userID = db.collection("users").doc(user.uid);
+          userID.get().then(userDoc =>{
+            var favorited = userDoc.data().favorites;
+            if (favorited.includes(docID)){
+              document.querySelector('#favorite' + docID).className = 'material-symbols-outlined filled heartIcon';
+              counter = 1
+            }
+          })
+        })
+        
         document.getElementById("eventItemList").appendChild(newcard);
 
       })
@@ -50,7 +64,7 @@ function addToFavorites(ID) {
                         counter = 0;
                         console.log(counter)
                         if (favoriteButton) {
-                            favoriteButton.innerHTML = "Add to Favorites"
+                            console.log("test")
                         }
                     })
             }

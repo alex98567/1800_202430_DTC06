@@ -854,11 +854,20 @@ body{
 
 /* Icons */
 
-.material-symbols-outlined {
+span.outline {
     color:white;
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
   'opsz' 40
+}
+
+span.filled {
+    color:white;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
 }
