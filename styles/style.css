@@ -365,7 +365,7 @@ body{
 }
 
 #eventTitle{
-    font-size: 1.5em;
+    font-size: 1em;
     position: relative;
 }
 #eventBriefDescription{
@@ -844,11 +844,26 @@ body{
 
         #eventItemList{
             width:100%;
+            grid-template-columns: repeat(1, auto);
         }
 
+        #eventItem{
+            box-sizing: border-box;
+            text-align: center;
+        }
+        #buttonwrap{
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width:100%;
+        }
+
+
         #eventButton{
-            height:2vh;
-            padding:0.5vw 2vw;
+            height:3vh;
+            font-size: 1em;
+            padding:1vw 2vw;
+            
         }
     }
     
@@ -868,14 +883,14 @@ body{
     .dropdown-content {
         display:none;
     }
-            #logOut{
-                text-decoration: none;
-                color:var(--DarkBgColor);
-                background-color: var(--AccentYellow);
-                padding: 2vh 3vw;
-                margin-left: 2vw;
-                border-radius: 10%;
-            }
+    #logOut{
+        text-decoration: none;
+        color:var(--DarkBgColor);
+        background-color: var(--AccentYellow);
+        padding: 2vh 3vw;
+        margin-left: 2vw;
+        border-radius: 10%;
+    }
 
 
 /* Icons */
