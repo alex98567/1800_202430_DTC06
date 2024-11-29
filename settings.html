@@ -31,24 +31,31 @@
                     <option>Disable</option>
                 </select>
             </div>
-
+    
             <div class="form-group mb-3">
                 <label for="notificationType">Notification Type</label>
-                <select class="form-control" id="notificationType" multiple>
-                    <option>Email</option>
-                    <option>SMS</option>
-                    <option>Push Notification</option>
+                <select class="form-control" id="notificationType">
+                    <option value="Email">Email</option>
+                    <option value="SMS">SMS</option>
+                    <option value="Push Notification">Push Notification</option>
                 </select>
-            </div>            
-
+            </div>                       
+    
             <div class="form-group mb-3">
                 <label for="notificationTime">Notification Time</label>
-                <input type="time" class="form-control" id="notificationTime">
+                <select class="form-control" id="notificationTime">
+                    <option value="5">5 minutes before</option>
+                    <option value="10">10 minutes before</option>
+                    <option value="15">15 minutes before</option>
+                    <option value="30">30 minutes before</option>
+                    <option value="60">1 hour before</option>
+                </select>
             </div>
-
+    
             <button type="button" class="btn btn-info" onclick="saveSettings()">Save Settings</button>
         </form>
     </div>
+    
     <!-- Footer -->
     <nav id="footerPlaceholder"></nav>
 

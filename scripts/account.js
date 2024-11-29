@@ -55,3 +55,31 @@ function saveUserInfo() {
 function redirectToSettings() {
         window.location.href = 'settings.html';
     }
+
+    function uploadProfilePhoto() {
+        const fileInput = document.getElementById('profilePhotoInput');
+        const file = fileInput.files[0];
+        if (!file) {
+            alert("No file selected!");
+            return;
+        }
+    
+        const currentUser = firebase.auth().currentUser;
+        const storageRef = firebase.storage().ref('profile_photos/' + currentUser.uid + '.jpg');
+        
+        storageRef.put(file).then(() => {
+            storageRef.getDownloadURL().then(url => {
+                db.collection("users").doc(currentUser.uid).update({
+                    profilePhoto: url
+                }).then(() => {
+                    alert("Profile photo updated successfully!");
+                    document.getElementById('profilePhotoPreview').src = url;
+                    document.getElementById('profilePhotoPreview').style.display = 'block';
+                });
+            });
+        }).catch(error => {
+            console.error("Error uploading profile photo:", error);
+            alert("Failed to upload photo.");
+     
+        });
+    }
