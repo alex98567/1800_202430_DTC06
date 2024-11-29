@@ -10,11 +10,31 @@ function displayEventInfo() {
             thisEvent = doc.data();
             eventDescription = thisEvent.description;
             eventName = thisEvent.name;
-            eventImage = thisEvent.image;
-
+            imageURL = thisEvent.image;
+            organizername = thisEvent.organizer;
+            contactinfo = thisEvent.contact;
+            day = thisEvent.date
+            timeframe = thisEvent.time;
+            eventlocation = thisEvent.location;
+            eventlink = thisEvent.link;
 
             document.getElementById("eventTitleName").innerHTML = eventName;
             document.getElementById("EventText").innerHTML = eventDescription;
+            document.getElementById("eventOrganizer").innerHTML = organizername;
+            document.getElementById("eventContact").innerHTML = contactinfo;
+            document.getElementById("eventDay").innerHTML = day;
+            document.getElementById("eventTime").innerHTML = timeframe;
+            document.getElementById("eventLink").href = eventlink;
+            document.getElementById("eventLocation").innerHTML = eventlocation;
+            if (registerneeded = "No"){
+              document.getElementById("eventRegister").innerHTML = "Not required"
+            }
+            else{
+              document.getElementById("eventRegister").innerHTML = "Registration required"
+            }
+            if (imageURL){
+              document.getElementById("eventImg").src = imageURL;
+            }
             firebase.auth().onAuthStateChanged(user =>{
                 userID = db.collection("users").doc(user.uid);
                 userID.get().then(userDoc =>{

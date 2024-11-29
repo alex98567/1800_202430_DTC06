@@ -31,10 +31,38 @@
             </div>
         </div>
         <main id="EventDescription">
-            <p id="EventText"></p>
-            <div id="eventImg"><img></div>
+            
+            <div id="ImageDesc">
+
+                <div id="eventImgWrap"><img id="eventImg" src="https://www.bcit.ca/wp-content/uploads/2024/01/cepp-edited-image.jpg" alt=""></div>
+                <p id="EventText">description</p>
+                <hr>
+            </div>
+            <div id="Information">
+                <div id="organizer">
+                    <p>Organizer</p>
+                    <hr>
+                    <p id="eventOrganizer" class="infotext">Organizer</p>
+                    <p id="eventContact" class="infotext">contact@email.com</p>
+                </div>
+                <div id="eventInfo">
+                    <hr>
+                    <p>Information:</p>
+                    <hr>
+                    <p id="eventDay" class="infotext">date</p>
+                    <p id="eventTime" class="infotext">time</p>
+                    <p id="eventLocation" class="infotext">Location</p>
+                </div>
+                <div id="registration">
+                    <hr>
+                    <p>Registration:</p>
+                    <hr>
+                    <p id="eventRegister" class="infotext">Registration?</p>
+                    <a id="eventLink" class="infotext">Visit Event Page</a>
+                </div>
+                <div id="FavoriteButton"><Button id="AddFavorite" onclick="addToFavorites()">Add to Favorites</Button></div>
+            </div>
         </main>
-        <div id="FavoriteButton"><Button id="AddFavorite" onclick="addToFavorites()">Add to Favorites</Button></div>
     </header>
     
     <footer id="footerPlaceholder"></footer>

@@ -441,33 +441,56 @@ body{
     text-align: center;
 }
 #EventDescription{
-    display: flex;
-    padding: 2vh 15vw 0;
-    position: relative;
-    height:auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vw;
+    display: grid;
+    height:100%;
+    grid-template-columns:1fr 7fr;
+    grid-template-areas: "info desc";
+}
+
+#ImageDesc{
+    grid-area: desc;
+    text-align:center;
+}
+
+#EventText{
+    padding: 2vh 3vw;
+    width:100%;
+}
+#Information{
+    grid-area: info;
+    width:100%;
+    hyphens: auto;
+    background-color: var(--BgColour);
+    padding: 2vh 3vw;
+}
+.infotext{
+    word-wrap: break-word;
+    width:100%;
+    font-size: 1em;
+}
+
+#eventImgWrap{
+    width:100%;
+    height:fit-content;
+    overflow:hidden;
 }
 #eventImg{
-    width:fit-content;
-    height:fit-content;
-    padding: 1vh 0;
+    width:100%;
+    object-fit: cover;
 }
+
 #FavoriteButton{
     width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh;
-    margin-bottom: 5vh;
+    margin-top: 5vh;
 }
 #AddFavorite{
-    border: black solid 0.2vw;
-    padding: 2vh 5vw;
+    border: lightgrey solid 0.2vw;
+    
     font-weight: bold;
-    font-size: 3vh;
+    font-size: 1em;
     border-radius: 1em;
 }
 #AddFavorite:hover{
