@@ -606,15 +606,15 @@ body{
     display: flex;
     position: relative;
     height: auto;
-    text-align: left;
     flex-direction: column;
     overflow: hidden;
+    text-decoration: none;
 }
 
 #mapTitle {
     display: flex;
     justify-content: center;
-    font-size: 32px;
+    font-size:1.5em;
 }
 
 #homeMapImages {
