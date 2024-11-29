@@ -442,8 +442,7 @@ body{
 }
 #EventDescription{
     display: grid;
-    height:100%;
-    grid-template-columns:1fr 7fr;
+    grid-template-columns:40% 60%;
     grid-template-areas: "info desc";
 }
 
