@@ -640,7 +640,6 @@ body{
     justify-content: center;
     align-self: center;
     width: 95%;
-    align-content: center;
 }
 
 #mapItem {
@@ -756,7 +755,6 @@ body{
     border-radius: 2em;
     padding: 2% 0;
     text-align: center;
-    min-width: 64%;
     margin:2vh 18vw;
     overflow: hidden;
     
