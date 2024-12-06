@@ -339,8 +339,8 @@ body{
     width: 70%;
     justify-self: center;
     border: black solid 0.15em;
-    border-radius: 2em;
-    padding: 2vh 1vw;
+    border-radius: 1em;
+    padding: 2vh 0.8vw;
     overflow-y: scroll;
     height:10vh;
     width:auto;
