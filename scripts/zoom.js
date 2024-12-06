@@ -37,7 +37,7 @@ function ImgZoom(imgID, resultID) {
         result.style.top = `${imgRect.top + posY}px`;
 
 
-        const zoomLevel = 2;
+        const zoomLevel = 3;
 
         const bgPosX = (x * zoomLevel - lensWidth / 2);
         const bgPosY = (y * zoomLevel - lensHeight / 2);

@@ -617,6 +617,12 @@ body{
     width:100%;
 }
 
+#welcomemsg{
+    width:100%;
+    text-align: center;
+    padding-top:1vh;
+}
+
 .titlebox {
     background-color: var(--DarkBluePrimary);
     color: var(--BgColour);
