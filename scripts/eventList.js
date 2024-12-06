@@ -115,10 +115,6 @@ async function Filtered(){
     }
     var filteredEvents = await query.get();
     let cardTemplate = document.getElementById("eventItemTemplate");
-    // var eventIdList = [] 
-    // filteredEvents.forEach(item =>{
-    //   eventIdList.push(item.id)
-    // })
 
     document.getElementById("eventItemList").innerHTML = ''
     // console.log(eventIdList)
@@ -153,4 +149,81 @@ async function Filtered(){
           document.getElementById("eventItemList").appendChild(newcard);
           
         })
+}
+
+
+async function Search(){
+  const Suggestions = []
+  searchbar = document.getElementById("searchField");
+  events = await db.collection("Events").get();
+  searchSuggest = document.getElementById("Suggestions");
+
+  events.forEach(eventitem =>{
+    Suggestions.push(eventitem.data().name)
+  })
+  searchbar.addEventListener('input', function(){
+    const searching = searchbar.value.toLowerCase();
+    if (searching === ""){
+      document.getElementById("eventItemList").innerHTML = ''
+      displayCardsDynamically("Events")
+    } else{
+      const results = Suggestions.filter(item =>
+        item.toLowerCase().includes(searching))
+        
+        searchSuggest.style = "display: flex";
+        searchSuggest.innerHTML = '';
+        results.forEach(item =>{
+           var suggestionitem = document.createElement('div');
+           suggestionitem.textContent = item;
+           suggestionitem.addEventListener('click', () => {
+            searchbar.value = item;
+            searchSuggest.innerHTML = ''
+            filterSearch(item);
+           })
+           searchSuggest.appendChild(suggestionitem)
+          })
+      }
+      document.addEventListener('click', function(event) {
+        if (event.target !== searchbar) {
+            searchSuggest.innerHTML = ''
+            searchSuggest.style = "display: none";
+        }
+    })
+    })
+  }
+
+Search()
+
+
+function filterSearch(query){
+  const eventItemList = document.getElementById("eventItemList");
+    eventItemList.innerHTML = ''; 
+    const matchingEvents = [];  
+
+    events.forEach(doc => {
+      const title = doc.data().name.toLowerCase();  
+
+      if (title.includes(query.toLowerCase())) {
+        matchingEvents.push(doc);
+      }
+    })
+    console.log(matchingEvents)
+    matchingEvents.forEach(eventitem => {
+    const title = eventitem.data().name;
+    const details = eventitem.data().description;
+    const docID = eventitem.id;
+    const date = eventitem.data().date;
+    const cardTemplate = document.getElementById("eventItemTemplate");
+
+    let newcard = cardTemplate.content.cloneNode(true);
+    newcard.querySelector('#eventTitle').innerHTML = title;
+    newcard.querySelector('#eventBriefDescription').innerHTML = details;
+    newcard.querySelector("#date").innerHTML = date;
+    newcard.querySelector('#eventButton').href = "event.html?docID=" + docID;
+    newcard.querySelector(".addFavorite").id = docID;
+    newcard.querySelector(".heartIcon").id = "favorite" + docID;
+    newcard.querySelector("#Type").innerHTML = eventitem.data().type;
+
+    eventItemList.appendChild(newcard);
+    })
 }
