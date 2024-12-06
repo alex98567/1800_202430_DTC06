@@ -276,12 +276,11 @@ body{
     display:flex;
     text-align: center;
     justify-content: space-between;
-    padding: 0 2em 0 2em;
+    padding: 0 2em;
 }
 #EventsTitle{
     flex-basis: 80%;
     padding-right: 20vw;
-
 }
 
 #EventsTitle h1{
@@ -304,19 +303,30 @@ body{
 #search{
     min-width:100%;
     padding: 0 5em;
-    /* display: flex; */
+    display: flex;
     justify-content: center;
-    display:none;
+    /* display:none; */
 }
 
+#options{
+    display:none;
+    flex-direction: column;
+    width:40%;
+    align-self:flex-end;
+    font-weight: 700;
+    margin-bottom: 1vh;
+}
+#options div{
+    padding:0.2vh;
+}
 #searchBar{
     border:black solid 0.15em;
     padding: 0 1vw;
     border-radius: 2em;
+    margin-bottom: 1vh;
     display:flex;
     justify-content:space-evenly;
     align-items: center;
-    margin-bottom: 2em;
     width:fit-content;
     height:2em;
     flex-grow:0.2;
