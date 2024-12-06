@@ -11,8 +11,8 @@ function ImgZoom(imgID, resultID) {
         const x = e.clientX - imgRect.left;
         const y = e.clientY - imgRect.top;
 
-        const lensWidth = 100;
-        const lensHeight = 100;
+        const lensWidth = 70;
+        const lensHeight = 70;
 
         result.style.display = 'block';
         result.style.width = `${lensWidth}px`;
