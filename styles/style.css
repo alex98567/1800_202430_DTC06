@@ -289,8 +289,8 @@ body{
 
 #backArrow{
     flex-basis: 6%;
+    margin-left: 2vw;
     height:auto;
-    min-width: 2.2em;
     cursor: pointer;
     color:var(--DarkBluePrimary);
     transition: 0.1s;
@@ -461,7 +461,7 @@ body{
     padding-bottom: 0.5vh;
 }
 #EventName h1{
-    font-size: 7vw;
+    font-size: 5vw;
     text-align: center;
 }
 #EventDescription{
@@ -554,12 +554,13 @@ body{
     color:white;
     width:80%;
     height:auto;
-    font-size: 1.5rem;
+    font-size: 1.0em;
+    padding-bottom: 2vh;
     text-align: start;
     text-decoration: none;
 }
 .removeBtn{
-    font-size: 1.2rem;
+    font-size: 0.9em;
     padding-bottom: 1em;
     color:white;
     background-color: transparent;
@@ -631,6 +632,7 @@ body{
 
 #mapPreviewGrid {
     margin-top: 1vh;
+    margin-bottom: 2vh;
     height: fit-content;
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -659,7 +661,7 @@ body{
 #mapTitle {
     display: flex;
     justify-content: center;
-    font-size:1em;
+    font-size:0.9em;
 }
 
 #homeMapImages {
@@ -856,7 +858,7 @@ body{
         flex-direction: column;
         align-items: center;
         width:100%;
-        padding:0 20vw;
+        padding:0 5vw;
     }
     
     #myresult {
@@ -920,7 +922,7 @@ body{
 
 
         #eventButton{
-            height:3vh;
+            height:4vh;
             font-size: 1em;
             padding:1vw 2vw;
             
