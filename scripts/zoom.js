@@ -17,8 +17,24 @@ function ImgZoom(imgID, resultID) {
         result.style.display = 'block';
         result.style.width = `${lensWidth}px`;
         result.style.height = `${lensHeight}px`;
-        result.style.left = `${x - lensWidth / 2}px`;
-        result.style.top = `${y - lensHeight / 2}px`;
+
+        let posX = x - lensWidth / 2;
+        let posY = y - lensHeight / 2; 
+
+        if (posX < 0){
+            posX = 0;
+        }
+        if (posY < 0){
+            posY = 0;
+        }
+        if (posX + lensWidth > imgRect.width){
+            posX = imgRect.width - lensWidth;
+        }
+        if (posY + lensHeight > imgRect.height){
+            posY = imgRect.height - lensHeight;
+        }
+        result.style.left = `${imgRect.left + posX}px`;
+        result.style.top = `${imgRect.top + posY}px`;
 
 
         const zoomLevel = 2;
